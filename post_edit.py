@@ -24,7 +24,11 @@ parser.add_argument('--remove', action='store_true', default=False)
 args = parser.parse_args()
 
 with open(args.file, 'r', encoding='utf-8', errors='ignore') as f:
+<<<<<<< HEAD
     content = [i.rstrip() for i in f.readlines()]
+=======
+    content = [i.strip() for i in f.readlines()]
+>>>>>>> 43d2876f685012a17cd4bd414fa38be6f5d7632d
 
 
 metadata = {
