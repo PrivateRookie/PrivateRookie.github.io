@@ -2,7 +2,7 @@
 layout: post
 title: miniserve 简单美观的文件服务器
 categories: [Note]
-tags: [rust, cli]
+tags: [Rust, cli]
 date: 2019-05-01
 ---
 
