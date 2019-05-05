@@ -2,7 +2,7 @@
 layout: post
 title: Magnum Stein Release New Features
 categories: [Tech]
-tags: [Magnum, Container, OpenStack]
+tags: [Magnum, Container, OpenStack, Python]
 date: 2019-05-05
 ---
 
