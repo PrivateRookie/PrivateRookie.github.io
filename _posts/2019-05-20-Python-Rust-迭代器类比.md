@@ -309,4 +309,4 @@ Rust 不愧是一门多范式的现代编程语言，如果你之前对某个语
 1. [《流畅的Python》]([http://www.ituring.com.cn/book/1564](http://www.ituring.com.cn/book/1564)) - 第14章，可迭代的对象、迭代器和生成器
 2. [std::iter::IntoIterator - Rust](https://doc.rust-lang.org/std/iter/trait.IntoIterator.html)
 3. [std::iter::Iterator - Rust](https://doc.rust-lang.org/std/iter/trait.Iterator.html)
-4. 《Rust 变成之道》 6.3 迭代器
+4. 《Rust 编程之道》 6.3 迭代器
