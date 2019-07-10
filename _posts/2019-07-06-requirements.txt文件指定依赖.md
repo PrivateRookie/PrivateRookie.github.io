@@ -8,7 +8,7 @@ date: 2019-07-06
 
 参考: [pip install](https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format)
 
-requirements.txt 文件用于声明 Python 依赖，平常简单所见的格式非常简单：
+requirements.txt 文件用于声明 Python 依赖，平常所见的格式非常简单：
 
 ```txt
 nose
