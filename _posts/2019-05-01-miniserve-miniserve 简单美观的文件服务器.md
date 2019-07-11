@@ -56,7 +56,7 @@ windows 下载好 exe 文件可直接运行
 仅支持 nightly channel，所以你得先切换到 nightly channel
 
 ```bash
-rustup add toolchain nightly
+rustup toolchain add nightly
 rustup default nightly
 
 cargo install miniserve

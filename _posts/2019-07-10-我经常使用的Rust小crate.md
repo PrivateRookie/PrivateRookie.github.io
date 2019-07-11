@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [译]我经常使用的 Rust 小 Crate
+title: \[译\]我经常使用的 Rust 小 Crate
 categories: [Tech]
 tags: [Rust, 翻译]
 date: 2019-07-10
