@@ -31,7 +31,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 更多 npm 镜像配置信息参考 [npm-taobao](https://npm.taobao.org/)
 
-## 安装 Angular 8
+## 安装 Angular 10 cli
 
 ```bash
 cnpm i -g install @angular/cli
