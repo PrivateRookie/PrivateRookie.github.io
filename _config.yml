@@ -23,12 +23,13 @@ description: 无事此静坐，闲情且赋诗
 
 # List of links in the navigation bar
 navbar-links:
-  关于我: "aboutme"
-  书单: "booklist"
-  主页: "https://www.zhihu.com/people/huang-xiang-dong-33/activities"
+  Blog: "blog"
+  阅读书单: "booklist"
   链接:
     - 知乎专栏: "https://zhuanlan.zhihu.com/c_208092758/"
-    - GitHub Pages: "https://PrivateRookie.github.io/"
+    - GitHub 主页: "https://PrivateRookie.github.io/"
+  主页: "https://www.zhihu.com/people/huang-xiang-dong-33/activities"
+  关于我: "aboutme"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
