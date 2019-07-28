@@ -28,7 +28,7 @@ navbar-links:
   链接:
     - 知乎专栏: "https://zhuanlan.zhihu.com/c_208092758/"
     - GitHub 主页: "https://PrivateRookie.github.io/"
-  主页: "https://www.zhihu.com/people/huang-xiang-dong-33/activities"
+  知乎主页: "https://www.zhihu.com/people/huang-xiang-dong-33/activities"
   关于我: "aboutme"
 
 # Image to show in the navigation bar - image must be a square (width = height)
