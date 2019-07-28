@@ -1,12 +1,12 @@
 ---
 layout: page
 title: 夜雨秋灯录
-subtitle: 生命中有太多问号，让我一路饱受困扰
+subtitle: 我致敬未来，用尽余生去爱
 use-site-title: true
 ---
 
 <div class="posts-list">
-  {% for post in paginator.posts %}
+  {% for post in site.paginator.posts %}
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ post.title }}</h2>
@@ -56,7 +56,7 @@ use-site-title: true
   {% endfor %}
 </div>
 
-{% if paginator.total_pages > 1 %}
+{% if site.paginator.total_pages > 1 %}
 <ul class="pager main-pager">
   {% if paginator.previous_page %}
   <li class="previous">
