@@ -44,7 +44,7 @@ use-site-title: true
       Tags:
       {% if site.link-tags %}
       {% for tag in post.tags %}
-      <a href="{{ site.baseurl }}/tags#{{- tag -}}">{{- tag -}}</a>
+      <a href="{{ site.baseurl }}/blog/tags#{{- tag -}}">{{- tag -}}</a>
       {% endfor %}
       {% else %}
         {{ post.tags | join: ", " }}
@@ -56,7 +56,7 @@ use-site-title: true
   {% endfor %}
 </div>
 
-{% if site.paginator.total_pages > 1 %}
+{% if paginator.total_pages > 1 %}
 <ul class="pager main-pager">
   {% if paginator.previous_page %}
   <li class="previous">
