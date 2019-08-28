@@ -26,7 +26,7 @@ navbar-links:
   Blog: "blog"
   我的项目:
     - interview: "https://privaterookie.github.io/interview/"
-    - gotham-middleware-basicauth: "https://github.com/PrivateRookie/gotham-middleware-basicauth"
+    - basicauth: "https://github.com/PrivateRookie/gotham-middleware-basicauth"
   阅读书单: "booklist"
   链接:
     - 知乎专栏: "https://zhuanlan.zhihu.com/c_208092758/"
