@@ -24,6 +24,9 @@ description: 无事此静坐，闲情且赋诗
 # List of links in the navigation bar
 navbar-links:
   Blog: "blog"
+  我的项目:
+    - interview: "https://privaterookie.github.io/interview/"
+    - basicauth: "https://github.com/PrivateRookie/gotham-middleware-basicauth"
   阅读书单: "booklist"
   链接:
     - 知乎专栏: "https://zhuanlan.zhihu.com/c_208092758/"
