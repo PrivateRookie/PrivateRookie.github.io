@@ -27,6 +27,7 @@ navbar-links:
   我的项目:
     - interview: "https://privaterookie.github.io/interview/"
     - basicauth: "https://github.com/PrivateRookie/gotham-middleware-basicauth"
+    - vsc-md-css: "https://privaterookie.github.io/vsc-markdown-css/"
   阅读书单: "booklist"
   链接:
     - 知乎专栏: "https://zhuanlan.zhihu.com/c_208092758/"
