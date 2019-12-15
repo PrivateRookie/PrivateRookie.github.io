@@ -29,6 +29,7 @@ navbar-links:
     - basicauth: "https://github.com/PrivateRookie/gotham-middleware-basicauth"
     - vsc-md-css: "https://privaterookie.github.io/vsc-markdown-css/"
     - wc.rs: "https://privaterookie.github.io/wc.rs/"
+    - puzzles: "https://privaterookie.github.io/puzzles/"
   阅读书单: "booklist"
   链接:
     - 知乎专栏: "https://zhuanlan.zhihu.com/c_208092758/"
