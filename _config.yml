@@ -25,6 +25,7 @@ description: 无事此静坐，闲情且赋诗
 navbar-links:
   Blog: "blog"
   我的项目:
+    - mockrs: "https://privaterookie.github.io/mockrs/"
     - interview: "https://privaterookie.github.io/interview/"
     - basicauth: "https://github.com/PrivateRookie/gotham-middleware-basicauth"
     - vsc-md-css: "https://privaterookie.github.io/vsc-markdown-css/"
