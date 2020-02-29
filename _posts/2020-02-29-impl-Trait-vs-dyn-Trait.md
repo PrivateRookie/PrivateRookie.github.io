@@ -190,10 +190,9 @@ trait object 上的方法.
 
 以下是本文参考的资料
 
-- [Rust Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/rust-2018/trait-system/impl-trait-for-returning-complex-types-with-ease.html#argument-position
-)
- - [impl trait 社区跟踪](https://github.com/rust-lang/rust/issues/34511)
- - [RFC-2113](https://github.com/rust-lang/rfcs/blob/master/text/2113-dyn-trait-syntax.md)
- - [Trait and Trait Object](https://joshleeb.com/posts/rust-traits-and-trait-objects/)
- - [Dynamic vs Static Dispatch](https://lukasatkinson.de/2016/dynamic-vs-static-dispatch/)
- - [Exploring Dynamic Dispatch in Rust](https://alschwalm.com/blog/static/2017/03/07/exploring-dynamic-dispatch-in-rust/)
+- [Rust Edition Guide](https://doc.rust-lang.org/nightly/edition-guide/rust-2018/trait-system/impl-trait-for-returning-complex-types-with-ease.html#argument-position)
+- [impl trait 社区跟踪](https://github.com/rust-lang/rust/issues/34511)
+- [RFC-2113](https://github.com/rust-lang/rfcs/blob/master/text/2113-dyn-trait-syntax.md)
+- [Trait and Trait Object](https://joshleeb.com/posts/rust-traits-and-trait-objects/)
+- [Dynamic vs Static Dispatch](https://lukasatkinson.de/2016/dynamic-vs-static-dispatch/)
+- [Exploring Dynamic Dispatch in Rust](https://alschwalm.com/blog/static/2017/03/07/exploring-dynamic-dispatch-in-rust/)
