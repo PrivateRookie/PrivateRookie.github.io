@@ -1,6 +1,6 @@
 ---
 layout: post
-title: \[使用 Rust 写 Parser\] 1. 初识 nom
+title: 【使用 Rust 写 Parser】1. 初识 nom
 categories: [Tech]
 tags: [Rust, Parser]
 date: 2020-03-21
