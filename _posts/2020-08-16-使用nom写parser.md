@@ -354,9 +354,3 @@ nom 确实是个好框架，文档详细，用着方便，性能不错: )
 18. MySQL 5.6 GTID 原理以及使用 - 泽锦 - 博客园 https://www.cnblogs.com/zejin2008/p/7705473.html
 19. MySQL :: MySQL 5.7 Reference Manual :: 12.22.2 DECIMAL Data Type Characteristics https://dev.mysql.com/doc/refman/5.7/en/precision-math-decimal-characteristics.html
 20. MySQL :: MySQL 8.0 Reference Manual :: 11 Data Types https://dev.mysql.com/doc/refman/8.0/en/data-types.html
-
-
-https://zhuanlan.zhihu.com/p/115017849
-https://zhuanlan.zhihu.com/p/139387293
-https://zhuanlan.zhihu.com/p/146455601
-https://zhuanlan.zhihu.com/p/186217695
