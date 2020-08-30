@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ## code 命令打开远程目录
+title: PowerShell 配置
 categories: [Note]
 tags: [PowerShell, VSCode]
 date: 2020-08-30
