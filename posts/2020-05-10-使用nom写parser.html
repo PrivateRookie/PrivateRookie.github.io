@@ -1,0 +1,664 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>使用nom写parser - 夜雨秋灯录</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../导言.html">导言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../文章.html"><strong aria-hidden="true">1.</strong> 文章</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../posts/2018-06-24-openstack创建虚拟机源码阅读.html"><strong aria-hidden="true">1.1.</strong> openstack创建虚拟机源码阅读</a></li><li class="chapter-item "><a href="../posts/2018-06-27-Bottle-框架中装饰器类和描述符应用.html"><strong aria-hidden="true">1.2.</strong> Bottle-框架中装饰器类和描述符应用</a></li><li class="chapter-item "><a href="../posts/2019-04-17-使用devpi搭建本地源.html"><strong aria-hidden="true">1.3.</strong> 使用devpi搭建本地源</a></li><li class="chapter-item "><a href="../posts/2019-04-20-Python展开嵌套序列.html"><strong aria-hidden="true">1.4.</strong> Python展开嵌套序列</a></li><li class="chapter-item "><a href="../posts/2019-04-20-pipenv-使用简介.html"><strong aria-hidden="true">1.5.</strong> pipenv-使用简介</a></li><li class="chapter-item "><a href="../posts/2019-04-22-深度系统rust开发环境搭建.html"><strong aria-hidden="true">1.6.</strong> 深度系统rust开发环境搭建</a></li><li class="chapter-item "><a href="../posts/2019-05-01-miniserve-miniserve简单美观的文件服务器.html"><strong aria-hidden="true">1.7.</strong> miniserve-miniserve简单美观的文件服务器</a></li><li class="chapter-item "><a href="../posts/2019-05-05-magnum-stein-release-new-features.html"><strong aria-hidden="true">1.8.</strong> magnum-stein-release-new-features</a></li><li class="chapter-item "><a href="../posts/2019-05-12-rust-rc.html"><strong aria-hidden="true">1.9.</strong> rust-rc</a></li><li class="chapter-item "><a href="../posts/2019-05-20-Python-Rust-迭代器类比.html"><strong aria-hidden="true">1.10.</strong> Python-Rust-迭代器类比</a></li><li class="chapter-item "><a href="../posts/2019-06-28-搭建etcd服务发现服务.html"><strong aria-hidden="true">1.11.</strong> 搭建etcd服务发现服务</a></li><li class="chapter-item "><a href="../posts/2019-07-03-OpenStack允许root用户使用ssh-key登录.html"><strong aria-hidden="true">1.12.</strong> OpenStack允许root用户使用ssh-key登录</a></li><li class="chapter-item "><a href="../posts/2019-07-06-requirements.txt文件指定依赖.html"><strong aria-hidden="true">1.13.</strong> requirements.txt文件指定依赖</a></li><li class="chapter-item "><a href="../posts/2019-07-10-我经常使用的Rust小crate.html"><strong aria-hidden="true">1.14.</strong> 我经常使用的Rust小crate</a></li><li class="chapter-item "><a href="../posts/2019-07-14-Rust模块与文件.html"><strong aria-hidden="true">1.15.</strong> Rust模块与文件</a></li><li class="chapter-item "><a href="../posts/2019-07-18-Deepin安装Angular10+.html"><strong aria-hidden="true">1.16.</strong> Deepin安装Angular10+</a></li><li class="chapter-item "><a href="../posts/2019-07-25-使用OSProfiler.html"><strong aria-hidden="true">1.17.</strong> 使用OSProfiler</a></li><li class="chapter-item "><a href="../posts/2019-07-27-windows上使用vscode-remote.html"><strong aria-hidden="true">1.18.</strong> windows上使用vscode-remote</a></li><li class="chapter-item "><a href="../posts/2019-08-04-使用rust-analyzer.html"><strong aria-hidden="true">1.19.</strong> 使用rust-analyzer</a></li><li class="chapter-item "><a href="../posts/2019-08-16-Python-package安装时安装额外文件.html"><strong aria-hidden="true">1.20.</strong> Python-package安装时安装额外文件</a></li><li class="chapter-item "><a href="../posts/2019-08-31-Rust-命令行工具.html"><strong aria-hidden="true">1.21.</strong> Rust-命令行工具</a></li><li class="chapter-item "><a href="../posts/2019-09-27-Fedora-CoreOS-尝鲜.html"><strong aria-hidden="true">1.22.</strong> Fedora-CoreOS-尝鲜</a></li><li class="chapter-item "><a href="../posts/2020-01-31-rust代码风格tips.html"><strong aria-hidden="true">1.23.</strong> rust代码风格tips</a></li><li class="chapter-item "><a href="../posts/2020-02-03-log4rs-Rust-log库.html"><strong aria-hidden="true">1.24.</strong> log4rs-Rust-log库</a></li><li class="chapter-item "><a href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html"><strong aria-hidden="true">1.25.</strong> impl-Trait-vs-dyn-Trait</a></li><li class="chapter-item "><a href="../posts/2020-03-04-nom-cheatsheet.html"><strong aria-hidden="true">1.26.</strong> nom-cheatsheet</a></li><li class="chapter-item "><a href="../posts/2020-03-09-gitlab-runner启动守护进程.html"><strong aria-hidden="true">1.27.</strong> gitlab-runner启动守护进程</a></li><li class="chapter-item "><a href="../posts/2020-03-21-使用nom写parser.html"><strong aria-hidden="true">1.28.</strong> 使用nom写parser</a></li><li class="chapter-item expanded "><a href="../posts/2020-05-10-使用nom写parser.html" class="active"><strong aria-hidden="true">1.29.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-07-使用nom写parser.html"><strong aria-hidden="true">1.30.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-25-Rust实现的日至收集工具.html"><strong aria-hidden="true">1.31.</strong> Rust实现的日至收集工具</a></li><li class="chapter-item "><a href="../posts/2020-07-19-typing+pyright-更正确的Python代码.html"><strong aria-hidden="true">1.32.</strong> typing+pyright-更正确的Python代码</a></li><li class="chapter-item "><a href="../posts/2020-07-31-boxercrab发布.html"><strong aria-hidden="true">1.33.</strong> boxercrab发布</a></li><li class="chapter-item "><a href="../posts/2020-08-16-使用nom写parser.html"><strong aria-hidden="true">1.34.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-08-30-PowerShell配置.html"><strong aria-hidden="true">1.35.</strong> PowerShell配置</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../笔记.html"><strong aria-hidden="true">2.</strong> 笔记</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../notes/rust/2021-10-31-嵌套解构.html"><strong aria-hidden="true">2.1.</strong> 嵌套解构</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">夜雨秋灯录</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="使用-rust-写-parser2-解析redis协议"><a class="header" href="#使用-rust-写-parser2-解析redis协议">【使用 Rust 写 Parser】2. 解析Redis协议</a></h1>
+<hr />
+<p>在基本熟悉 nom 之后, 这次我们准备用 nom 实现一个 redis 通信协议的解析器. 选择 redis 是
+因为 redis 的通信协议易读且比较简单.</p>
+<h2 id="准备"><a class="header" href="#准备">准备</a></h2>
+<p>如果你对 redis 通信协议不熟悉的话可以查阅 <a href="http://redisdoc.com/topic/protocol.html#id1">通信协议（protocol）</a>.
+简单来说 redis 通信协议分为统一请求协议(这里只讨论新版请求协议)和回复协议, 请求协议可以方便地通过 Rust 内置的 <code>format!</code> 拼接构成, 而通信协议则使用 nom 解析. redis 协议非常简单,
+这里不再赘述.</p>
+<p>首先我们需要一个 redis 服务器, 这里我在开发的机器上用 docker 启动一个 redis 服务器:</p>
+<pre><code class="language-bash">docker run -d --name redis -p 6379:6379 redis redis-server --appendonly yes
+</code></pre>
+<p>测试下 redis 服务</p>
+<pre><code class="language-bash">telnet localhost 6379
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+ping
++PONG
+</code></pre>
+<p>出现 +PONG 说明服务器已正常运行</p>
+<h2 id="实现基本功能"><a class="header" href="#实现基本功能">实现基本功能</a></h2>
+<p>首先创建项目</p>
+<pre><code class="language-bash">cargo new rcli &amp;&amp; cd rcli
+</code></pre>
+<p>添加如下依赖</p>
+<pre><code class="language-toml">[dependencies]
+tokio = { version = &quot;0.2&quot;, features = [&quot;full&quot;]}
+nom = &quot;5&quot;
+bytes = &quot;0.5.4&quot;
+structopt = &quot;0.3.14&quot;
+</code></pre>
+<p>structopt 可以帮助我们快速构建命令行工具输入 redis 命令帮助测试, bytes 则可以帮助我们处理字节, tokio 依赖是上个测试代码遗留的依赖, 刚好新代码也需要 tcp 连接, 索性使用 tokio 处理 tcp 连接, nom 自然是用于解析回复.</p>
+<p>首先我们需要创建 tcp 连接与 redis 通信, 并且写入一些数据看看协议是否管用:</p>
+<pre><pre class="playground"><code class="language-rust">use bytes::{BufMut, BytesMut};
+use std::error::Error;
+use tokio::net::TcpStream;
+use tokio::prelude::*;
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+
+    let mut stream = TcpStream::connect(&quot;127.0.0.1:6379&quot;).await?;
+    let mut buf = [0u8; 1024];
+    let mut resp = BytesMut::with_capacity(1024);
+
+    let (mut reader, mut writer) = stream.split();
+    // 向服务器发送 PING
+    writer.write(b&quot;*1\r\n$4\r\nPING\r\n&quot;).await?;
+    let n = reader.read(&amp;mut buf).await?;
+    resp.put(&amp;buf[0..n]);
+    // 返回结果应该是 PONG
+    println!(&quot;{:?}&quot;, reply);
+    Ok(())
+}
+</code></pre></pre>
+<p>如上面代码展示的, 我们创建一个 tcp 连接和一个缓冲buf, 在成功连接后根据协议尝试写入 <code>*1\r\n$4\r\nPING\r\n</code>, 预期结果是服务器返回 <code>&quot;+PONG\r\n&quot;</code>.</p>
+<p>现在我们可以创建 CLI 实现几个常用的 redis 命令, 方便我们向服务器发送命令. 创建 <code>commands.rs</code> 文件, 记得在 <code>main.rs</code> 中导入它.</p>
+<p>以 <code>rpush</code> 为例, <code>rpush</code> 命令用法为 <code>RPUSH key value [value …]</code></p>
+<p>使用 structopt 可以这样定义一个枚举(使用结构体也可以, 但因为将来有很多子命令, 所以枚举更合适)</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use structopt::StructOpt;
+
+#[derive(Debug, Clone, StructOpt)]
+pub enum Commands {
+    /// push value to list
+    Rpush {
+        /// redis key
+        key: String,
+
+        /// value
+        values: Vec&lt;String&gt;,
+    },
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>接着在 <code>main.rs</code> 中使用 <code>Commands</code> 解析命令行</p>
+<pre><pre class="playground"><code class="language-rust">use structopt::StructOpt;
+mod commands;
+
+#[tokio::main]
+async fn main() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+    // 创建 tcp 连接, buf 等...
+    let com = commands::Commands::from_args();
+    // 发送命令 ...
+}
+</code></pre></pre>
+<p>运行项目看下效果</p>
+<pre><code class="language-bash">cargo run -- help
+
+push value to list
+
+USAGE:
+    rrdis-cli rpush &lt;key&gt; [values]...
+
+FLAGS:
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+ARGS:
+    &lt;key&gt;          redis key
+    &lt;values&gt;...    value
+</code></pre>
+<p>接下来要把从命令行传来的参数转换为 redis 统一请求. redis 以 <code>\r\n</code> 为分隔符, redis 请求格式以 <code>*argc</code> 开头,
+<code>argc</code> 是此次请求的参数个数, 每个参数先以 <code>$&lt;参数长度&gt;</code> 声明参数长度, 接着 <code>\r\n</code> 分割符, 然后是参数数据, 若有多个参数则重复此步骤. 最后以 <code>\r\n</code> 结尾.</p>
+<p>比如上面的 <code>PING</code> 转换为 <code>*1\r\n$4\r\nPING\r\n</code>, 而 <code>GET</code> 转换为 <code>*2\r\n$3\r\nGET\r\n$3\r\nkey\r\n</code>.</p>
+<p>可以使用一个 builder 帮助我们转换:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use bytes::{BufMut, BytesMut};
+
+#[derive(Debug, Clone)]
+struct CmdBuilder {
+    args: Vec&lt;String&gt;,
+}
+
+impl CmdBuilder {
+    fn new() -&gt; Self {
+        CmdBuilder { args: vec![] }
+    }
+    fn arg(mut self, arg: &amp;str) -&gt; Self {
+        self.args.push(format!(&quot;${}&quot;, arg.len()));
+        self.args.push(arg.to_string());
+        self
+    }
+    fn add_arg(&amp;mut self, arg: &amp;str) {
+        self.args.push(format!(&quot;${}&quot;, arg.len()));
+        self.args.push(arg.to_string());
+    }
+    fn to_bytes(&amp;self) -&gt; BytesMut {
+        let mut bytes = BytesMut::new();
+        bytes.put(&amp;format!(&quot;*{}\r\n&quot;, self.args.len() / 2).into_bytes()[..]);
+        bytes.put(&amp;self.args.join(&quot;\r\n&quot;).into_bytes()[..]);
+        bytes.put(&amp;b&quot;\r\n&quot;[..]);
+        bytes
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>CmdBuilder</code> 做的很简单, 保存通过 <code>arg</code> 或 <code>add_arg</code> 传入的参数, 在 <code>to_bytes</code> 方法中拼接
+这些参数为有效的请求.</p>
+<p>例如可以通过如下方式构建一个 <code>GET</code> 命令</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let cmd = CmdBuilder::new().arg(&quot;GET&quot;).arg(&quot;key&quot;).to_bytes()
+<span class="boring">}
+</span></code></pre></pre>
+<p>接下来使用 <code>CmdBuilder</code> 为 <code>Commands</code> 实现 <code>to_bytes</code> 方法</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>impl Commands {
+    pub fn to_bytes(&amp;self) -&gt; bytes::BytesMut {
+        let cmd = match self {
+            Commands::Rpush { key, values } =&gt; {
+                let mut builder = CmdBuilder::new().arg(&quot;RPUSH&quot;).arg(key);
+                values.iter().for_each(|v| builder.add_arg(v));
+                builder.to_bytes()
+            }
+        };
+        cmd
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>改写 <code>main</code> 函数发送构建的请求</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// ... 省略
+let com = commands::Commands::from_args();
+writer.write(&amp;com.to_bytes()).await?;
+<span class="boring">}
+</span></code></pre></pre>
+<pre><code class="language-bash">cargo run -- rpush list a b c d
+
+# redis 成功返回响应
+:3\r\n
+</code></pre>
+<p>All is well, 对于其他命令可以通过相同方法实现, 可以在 <a href="https://github.com/PrivateRookie/rrdis-cli/blob/master/src/commands.rs">rrdis-cli/src/commands.rs</a> 看到完整实现.</p>
+<h2 id="解析回复"><a class="header" href="#解析回复">解析回复</a></h2>
+<p>现在终于到 nom 出场了. 新建 <code>reply.rs</code> 文件, 并在 <code>main.rs</code> 导入. 首先导入需要使用的 nom 方法, 接着定义 <code>Reply</code>, 因为 redis 回复种类有限, 所以用一个枚举是非常合适的.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use nom::branch::alt;
+use nom::bytes::complete::tag;
+use nom::bytes::complete::{take_while, take_while1, take_while_m_n};
+use nom::combinator::map;
+use nom::multi::many_m_n;
+use nom::sequence::delimited;
+use nom::IResult;
+
+#[derive(Debug)]
+pub enum Reply {
+    // 状态回复或单行回复
+    SingleLine(String),
+    // 错误回复
+    Err(String),
+    // 整数回复
+    Int(i64),
+    // 批量回复
+    Batch(Option&lt;String&gt;),
+    // 多条批量回复
+    MultiBatch(Option&lt;Vec&lt;Reply&gt;&gt;),
+    // 回复中没有, 这里是为了方便进行错误处理添加的
+    BadReply(String),
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="单行回复"><a class="header" href="#单行回复">单行回复</a></h3>
+<p>协议中单行回复定义如下:</p>
+<blockquote>
+<p>一个状态回复（或者单行回复，single line reply）是一段以 &quot;+&quot; 开始、 &quot;\r\n&quot; 结尾的单行字符串。</p>
+</blockquote>
+<p>所以解析思路是: 如果回复以&quot;+&quot;开头, 则读取余下字节存作为回复, 直到 &quot;\r\n&quot;, 伪代码如下</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>take_if(&quot;+&quot;), take_util_new_line, take_if(&quot;\r\n&quot;)
+<span class="boring">}
+</span></code></pre></pre>
+<p>nom 中的 <code>tag</code> 可以完美实现伪代码中的 <code>take_if</code> 功能, 令人惊喜的是对于&quot;消耗输入直到不符合某种条件&quot;这个常见解析模式, nom 提供了 <code>take_while</code> 函数, 所以我们的解析函数可以写成:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_single_line(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    let (i, _) = tag(&quot;+&quot;)(i)?;
+    let (i, resp) = take_while(|c| c != '\r' &amp;&amp; c != '\n')(i)?;
+    let (i, _) = tag(&quot;\r\n&quot;)(i)?;
+    Ok((i, Reply::SingleLine(resp.to_string())))
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>tag</code> 和 <code>take_while</code> 让解析函数的功能非常直观地展现出来, 这让它看着想伪代码, 但它真的能运行!</p>
+<p>在函数中只有 <code>take_while</code> 返回的结果是我们想要的, 但两个 <code>tag</code> 又是不可或缺, 对于这一常见解析模式 nom 提供了 <code>delimited</code> 这个组合子函数, 这个组合子函数接受三个类似 <code>tag(&quot;xx&quot;)</code> 这样的基本函数, 依次应用这三个函数, 如果成功, 则返回第二个函数解析的结果.</p>
+<p>所以我们的函数可以这样写:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_single_line(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    let (i, resp) = delimited(
+        tag(&quot;+&quot;),
+        take_while(|c| c != '\r' &amp;&amp; c != '\n'),
+        tag(&quot;\r\n&quot;),
+    )(i)?;
+    Ok((i, Reply::SingleLine(String::from(resp))))
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="错误回复"><a class="header" href="#错误回复">错误回复</a></h3>
+<p>错误回复定义:</p>
+<blockquote>
+<p>错误回复和状态回复非常相似， 它们之间的唯一区别是， 错误回复的第一个字节是 &quot;-&quot; ， 而状态回复的第一个字节是 &quot;+&quot;</p>
+</blockquote>
+<p>所以错误回复解析函数和上面的差不多:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_err(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    let (i, resp) = delimited(
+        tag(&quot;-&quot;),
+        // take_while1 与 take_while 类似, 但要求至少一个字符符合条件
+        take_while1(|c| c != '\r' &amp;&amp; c != '\n'),
+        tag(&quot;\r\n&quot;),
+    )(i)?;
+    Ok((i, Reply::Err(String::from(resp))))
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="整数回复"><a class="header" href="#整数回复">整数回复</a></h3>
+<blockquote>
+<p>整数回复就是一个以 &quot;:&quot; 开头， CRLF 结尾的字符串表示的整数,</p>
+</blockquote>
+<p>整数回复结构与前两种类似, 区别在于中间是整数, 需要将 <code>take_while1</code> 的返回值转换为整数.</p>
+<p>如果没有进行类型转换解析函数可以这样实现:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_int(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    let (i, int) = delimited(
+        tag(&quot;:&quot;),
+        // 注意负数前缀
+        take_while1(|c: char| c.is_digit(10) || c == '-'),
+        tag(&quot;\r\n&quot;),
+    )(i)?;
+    // ... 类型转换
+    Ok((i, Reply::Int(int)))
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>注意到 nom 提供的基本解析工厂函数如 <code>tag</code> 创建的解析函数返回值都是 <code>IResult</code>, 它与 <code>Result</code> 类似, 可以应用 <code>map</code> 运算子, 不过这个 <code>map</code> 需使用 nom 提供的</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>map(take_while1(|c: char| c.is_digit(10) || c == '-'), |int: &amp;str| int.parse::&lt;i64&gt;().unwrap())
+<span class="boring">}
+</span></code></pre></pre>
+<p>通过 nom 的 map 函数可以把返回值从 <code>IResult&lt;&amp;str, &amp;str&gt;</code> 映射为 <code>IResult&lt;&amp;str, i64&gt;</code>,
+最后解析函数可以写成</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_int(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    let (i, int) = delimited(
+        tag(&quot;:&quot;),
+        map(
+            take_while1(|c: char| c.is_digit(10) || c == '-'),
+            |int: &amp;str| int.parse::&lt;i64&gt;().unwrap(),
+        ),
+        tag(&quot;\r\n&quot;),
+    )(i)?;
+    Ok((i, Reply::Int(int)))
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="批量回复"><a class="header" href="#批量回复">批量回复</a></h3>
+<blockquote>
+<p>服务器发送的内容中：</p>
+<ul>
+<li>第一字节为 &quot;$&quot; 符号</li>
+<li>接下来跟着的是表示实际回复长度的数字值</li>
+<li>之后跟着一个 CRLF</li>
+<li>再后面跟着的是实际回复数据</li>
+<li>最末尾是另一个 CRLF</li>
+</ul>
+</blockquote>
+<p>同时批量回复还有特殊情况</p>
+<blockquote>
+<p>如果被请求的值不存在， 那么批量回复会将特殊值 -1 用作回复的长度值, 这种回复称为空批量回复（NULL Bulk Reply）</p>
+</blockquote>
+<p>此时协议要求客户端返回空对象, 对于 Rust 则是 <code>None</code>, 所以 <code>BatchReply</code> 才会被定义为 <code>BatchReply&lt;Option&lt;String&gt;&gt;</code>.</p>
+<p>所以这个函数的解析可能稍微复杂点, 但方法与上面没有太大差异, 除了新的 <code>take_while_m_n</code>,
+<code>take_while_m_n</code> 与 <code>take_while</code> 类似, 不同的是它可以指定消耗输入最小数和最大数m, n.</p>
+<p>如果是空回复则尝试匹配 <code>\r\n</code>, 如果成功, 直接返回, 否则根据拿到的回复长度, 获取那么多长度的字符, 接着应该碰到 <code>\r\n</code>.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_batch(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    let (i, _) = tag(&quot;$&quot;)(i)?;
+    let (i, len) = (take_while1(|c: char| c.is_digit(10) || c == '-'))(i)?;
+    if len == &quot;-1&quot; {
+        let (i, _) = tag(&quot;\r\n&quot;)(i)?;
+        Ok((i, Reply::Batch(None)))
+    } else {
+        let len = len.parse::&lt;usize&gt;().unwrap();
+        let (i, resp) = delimited(tag(&quot;\r\n&quot;), take_while_m_n(len, len, |_| true), tag(&quot;\r\n&quot;))(i)?;
+        Ok((i, Reply::Batch(Some(String::from(resp)))))
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="多条批量回复"><a class="header" href="#多条批量回复">多条批量回复</a></h3>
+<blockquote>
+<p>多条批量回复是由多个回复组成的数组， 数组中的每个元素都可以是任意类型的回复， 包括多条批量回复本身。
+多条批量回复的第一个字节为 &quot;*&quot; ， 后跟一个字符串表示的整数值， 这个值记录了多条批量回复所包含的回复数量， 再后面是一个 CRLF</p>
+</blockquote>
+<p>多条批量回复其实是对上面四种回复的嵌套, 但需要注意&quot;空白多条批量回复&quot;和&quot;无内容多条批量回复&quot;这两种特殊情况.</p>
+<p>空白多条回复为 &quot;*0\r\n&quot;, 无内容多条批量回复为 &quot;*-1\r\n&quot;, 在解析时需要对这两种特殊情况进行处理. 在其他情况则可以应用 nom 提供的 <code>alt</code> 组合子服用之前的四个解析函数; <code>alt</code> 即&quot;可选的&quot;, 它接受多个解析函数元组, 依次尝试应用每个函数, 返回第一个成功解析结果或抛出错误.</p>
+<p>同时对于重复应用某个解析函数 m 到 n 次这种模式, nom 提供了 <code>many_m_n</code> 组合子, 对于 <code>fn parse_item(&amp;str) -&gt; IResult&lt;&amp;str, Reply&gt;</code> 这样的函数, <code>many_m_n(parse_item, 0, 12)</code> 返回值为 <code>IResult&lt;&amp;str, Vec&lt;Reply&gt;&gt;</code>.</p>
+<p>理清逻辑后解析多条批量回复的解析函数虽然有些长但还是很清晰的:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_multi_batch(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    let (i, count) = delimited(
+        tag(&quot;*&quot;),
+        take_while1(|c: char| c.is_digit(10) || c == '-'),
+        tag(&quot;\r\n&quot;),
+    )(i)?;
+    if count == &quot;-1&quot; {
+        let (i, _) = tag(&quot;\r\n&quot;)(i)?;
+        Ok((i, Reply::MultiBatch(None)))
+    } else {
+        let count = count.parse::&lt;usize&gt;().unwrap();
+        let (i, responses) = many_m_n(
+            count,
+            count,
+            alt((parse_single_line, parse_err, parse_int, parse_batch)),
+        )(i)?;
+        // 做个严格检查, 检查解析到的个数与预期的是否一致
+        if responses.len() != count {
+            Ok((
+                i,
+                Reply::BadReply(format!(&quot;expect {} items, got {}&quot;, count, responses.len())),
+            ))
+        } else {
+            Ok((i, Reply::MultiBatch(Some(responses))))
+        }
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>最后用 <code>alt</code> 做个&quot;汇总&quot;</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse(i: &amp;str) -&gt; IResult&lt;&amp;str, Reply&gt; {
+    alt((
+        parse_single_line,
+        parse_err,
+        parse_int,
+        parse_batch,
+        parse_multi_batch,
+    ))(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>至此我们我们的解析函数到完成了, 为 <code>Reply</code> 实现 <code>Display</code> 特性后对 redis 返回的消息应用 <code>parse</code> 然后把解析结果打印出来即可验证解析函数正确性. 完整代码在 <a href="https://github.com/PrivateRookie/rrdis-cli/blob/master/src/reply.rs">rrdis-cli/src/reply.rs</a></p>
+<h2 id="汇总"><a class="header" href="#汇总">汇总</a></h2>
+<p>完整代码可以在我的 <a href="https://github.com/PrivateRookie/rrdis-cli">rrdis-cli</a> 查看.
+不知道大家对 nom 的评价如何, 我觉得使用 <code>nom</code> 提供的基本函数和一系列组合子从最小元素出发, 搭积木似的构建出更复杂的解析函数, 即降低了开发难度, 熟悉之后代码逻辑还挺清晰的.</p>
+<p>整个 rrdis-cli 项目实现 set, get, incr, lrange, rpush 和 ping 这基本命令, 实现其他命令也是非常简单; 并且实现了绝大部分(还有一些特殊错误情况没处理)协议解析, 整个项目代码量如下</p>
+<pre><code class="language-bash">tokei .
+-------------------------------------------------------------------------------
+ Language            Files        Lines         Code     Comments       Blanks
+-------------------------------------------------------------------------------
+ Markdown                1            4            4            0            0
+ Rust                    3          332          284           20           28
+ TOML                    1           15           12            1            2
+-------------------------------------------------------------------------------
+ Total                   5          351          300           21           30
+-------------------------------------------------------------------------------
+</code></pre>
+<p>Rust 代码只有 332 行, 挺简洁的, 估计比我用 Python 实现都少.</p>
+<p>下一篇使用 nom 写什么还不确定, 随缘更新吧~</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../posts/2020-03-21-使用nom写parser.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../posts/2020-06-07-使用nom写parser.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../posts/2020-03-21-使用nom写parser.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../posts/2020-06-07-使用nom写parser.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lunr.zh.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

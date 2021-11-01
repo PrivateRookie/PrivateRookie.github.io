@@ -1,0 +1,550 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>使用nom写parser - 夜雨秋灯录</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../导言.html">导言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../文章.html"><strong aria-hidden="true">1.</strong> 文章</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../posts/2018-06-24-openstack创建虚拟机源码阅读.html"><strong aria-hidden="true">1.1.</strong> openstack创建虚拟机源码阅读</a></li><li class="chapter-item "><a href="../posts/2018-06-27-Bottle-框架中装饰器类和描述符应用.html"><strong aria-hidden="true">1.2.</strong> Bottle-框架中装饰器类和描述符应用</a></li><li class="chapter-item "><a href="../posts/2019-04-17-使用devpi搭建本地源.html"><strong aria-hidden="true">1.3.</strong> 使用devpi搭建本地源</a></li><li class="chapter-item "><a href="../posts/2019-04-20-Python展开嵌套序列.html"><strong aria-hidden="true">1.4.</strong> Python展开嵌套序列</a></li><li class="chapter-item "><a href="../posts/2019-04-20-pipenv-使用简介.html"><strong aria-hidden="true">1.5.</strong> pipenv-使用简介</a></li><li class="chapter-item "><a href="../posts/2019-04-22-深度系统rust开发环境搭建.html"><strong aria-hidden="true">1.6.</strong> 深度系统rust开发环境搭建</a></li><li class="chapter-item "><a href="../posts/2019-05-01-miniserve-miniserve简单美观的文件服务器.html"><strong aria-hidden="true">1.7.</strong> miniserve-miniserve简单美观的文件服务器</a></li><li class="chapter-item "><a href="../posts/2019-05-05-magnum-stein-release-new-features.html"><strong aria-hidden="true">1.8.</strong> magnum-stein-release-new-features</a></li><li class="chapter-item "><a href="../posts/2019-05-12-rust-rc.html"><strong aria-hidden="true">1.9.</strong> rust-rc</a></li><li class="chapter-item "><a href="../posts/2019-05-20-Python-Rust-迭代器类比.html"><strong aria-hidden="true">1.10.</strong> Python-Rust-迭代器类比</a></li><li class="chapter-item "><a href="../posts/2019-06-28-搭建etcd服务发现服务.html"><strong aria-hidden="true">1.11.</strong> 搭建etcd服务发现服务</a></li><li class="chapter-item "><a href="../posts/2019-07-03-OpenStack允许root用户使用ssh-key登录.html"><strong aria-hidden="true">1.12.</strong> OpenStack允许root用户使用ssh-key登录</a></li><li class="chapter-item "><a href="../posts/2019-07-06-requirements.txt文件指定依赖.html"><strong aria-hidden="true">1.13.</strong> requirements.txt文件指定依赖</a></li><li class="chapter-item "><a href="../posts/2019-07-10-我经常使用的Rust小crate.html"><strong aria-hidden="true">1.14.</strong> 我经常使用的Rust小crate</a></li><li class="chapter-item "><a href="../posts/2019-07-14-Rust模块与文件.html"><strong aria-hidden="true">1.15.</strong> Rust模块与文件</a></li><li class="chapter-item "><a href="../posts/2019-07-18-Deepin安装Angular10+.html"><strong aria-hidden="true">1.16.</strong> Deepin安装Angular10+</a></li><li class="chapter-item "><a href="../posts/2019-07-25-使用OSProfiler.html"><strong aria-hidden="true">1.17.</strong> 使用OSProfiler</a></li><li class="chapter-item "><a href="../posts/2019-07-27-windows上使用vscode-remote.html"><strong aria-hidden="true">1.18.</strong> windows上使用vscode-remote</a></li><li class="chapter-item "><a href="../posts/2019-08-04-使用rust-analyzer.html"><strong aria-hidden="true">1.19.</strong> 使用rust-analyzer</a></li><li class="chapter-item "><a href="../posts/2019-08-16-Python-package安装时安装额外文件.html"><strong aria-hidden="true">1.20.</strong> Python-package安装时安装额外文件</a></li><li class="chapter-item "><a href="../posts/2019-08-31-Rust-命令行工具.html"><strong aria-hidden="true">1.21.</strong> Rust-命令行工具</a></li><li class="chapter-item "><a href="../posts/2019-09-27-Fedora-CoreOS-尝鲜.html"><strong aria-hidden="true">1.22.</strong> Fedora-CoreOS-尝鲜</a></li><li class="chapter-item "><a href="../posts/2020-01-31-rust代码风格tips.html"><strong aria-hidden="true">1.23.</strong> rust代码风格tips</a></li><li class="chapter-item "><a href="../posts/2020-02-03-log4rs-Rust-log库.html"><strong aria-hidden="true">1.24.</strong> log4rs-Rust-log库</a></li><li class="chapter-item "><a href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html"><strong aria-hidden="true">1.25.</strong> impl-Trait-vs-dyn-Trait</a></li><li class="chapter-item "><a href="../posts/2020-03-04-nom-cheatsheet.html"><strong aria-hidden="true">1.26.</strong> nom-cheatsheet</a></li><li class="chapter-item "><a href="../posts/2020-03-09-gitlab-runner启动守护进程.html"><strong aria-hidden="true">1.27.</strong> gitlab-runner启动守护进程</a></li><li class="chapter-item "><a href="../posts/2020-03-21-使用nom写parser.html"><strong aria-hidden="true">1.28.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-05-10-使用nom写parser.html"><strong aria-hidden="true">1.29.</strong> 使用nom写parser</a></li><li class="chapter-item expanded "><a href="../posts/2020-06-07-使用nom写parser.html" class="active"><strong aria-hidden="true">1.30.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-25-Rust实现的日至收集工具.html"><strong aria-hidden="true">1.31.</strong> Rust实现的日至收集工具</a></li><li class="chapter-item "><a href="../posts/2020-07-19-typing+pyright-更正确的Python代码.html"><strong aria-hidden="true">1.32.</strong> typing+pyright-更正确的Python代码</a></li><li class="chapter-item "><a href="../posts/2020-07-31-boxercrab发布.html"><strong aria-hidden="true">1.33.</strong> boxercrab发布</a></li><li class="chapter-item "><a href="../posts/2020-08-16-使用nom写parser.html"><strong aria-hidden="true">1.34.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-08-30-PowerShell配置.html"><strong aria-hidden="true">1.35.</strong> PowerShell配置</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../笔记.html"><strong aria-hidden="true">2.</strong> 笔记</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../notes/rust/2021-10-31-嵌套解构.html"><strong aria-hidden="true">2.1.</strong> 嵌套解构</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">夜雨秋灯录</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="使用-rust-写-parser3-解析json"><a class="header" href="#使用-rust-写-parser3-解析json">【使用 Rust 写 Parser】3. 解析JSON</a></h1>
+<hr />
+<p>上一篇文章中我们使用 nom 解析了 redis 协议, 本次我们将会尝试写一个 JSON parse, 同时熟悉 nom 的错误处理.
+本篇例子来自 nom 官方文档的例子<a href="https://github.com/Geal/nom/blob/master/examples/json.rs">nom/examples/json.rs</a>, 做了
+一些修改以便可以在 nom 5.1 版本可以运行且符合标准描述.</p>
+<hr />
+<p>经常进行 web 编程的想必都非常熟悉 JSON, 它被广泛用于数据传递, 要想实现了 JSON parse, 我们需要了解它的标准.
+<a href="https://www.json.org/json-zh.html">JSON标准</a>网站上给出非常详细的 JSON 标准解释, 而且还带有图表(下面使用的图标均来自 https://www.json.org/json-zh.html), 我们需要做的只是参照标准
+利用 nom 从基本元素开始一步步实现 JSON parse.</p>
+<p><a href="https://www.json.org/json-zh.html">JSON标准</a> 分6部分对 JSON 标注进行解释, 从简单到复杂为:</p>
+<ol>
+<li>空白(whitespace)</li>
+<li>数值(number)</li>
+<li>字符串(string)</li>
+<li>值(value)</li>
+<li>数组(array)</li>
+<li>对象(object)</li>
+</ol>
+<p>我们可以用一个枚举代表除空白外的解析值</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>#[derive(Debug, PartialEq)]
+pub enum JsonValue {
+    Str(String),
+    Boolean(bool),
+    Null,
+    Num(f64),
+    Array(Vec&lt;JsonValue&gt;),
+    Object(HashMap&lt;String, JsonValue&gt;),
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="空白"><a class="header" href="#空白">空白</a></h2>
+<blockquote>
+<p>空白可以加入到任何符号之间</p>
+</blockquote>
+<p>其完整描述为</p>
+<p><img src="https://www.json.org/img/whitespace.png" alt="空白描述" /></p>
+<p>可以看到空白元素为 &quot; &quot; -&gt; space, &quot;\n&quot; -&gt; linefeed, &quot;\r&quot; -&gt; carriage return 和 &quot;\t&quot; 中任意一个.
+对输入的字符进行判断, 如果它是4个空白字符之一, 消耗输入并继续, 直到遇到其他元素, 这时我们就得到了一个&quot;空白&quot;.</p>
+<p>使用 nom 的 <code>take_while</code> 可以很快地帮我们实现 whitespace parse</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn sp(i: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    let chars = &quot; \n\r\t&quot;;
+    take_while(move |c: char| chars.contains(c))(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>但其实 nom 已经自带了一个空白解析函数 <code>multispace0</code>, 可以根据个人喜好使用.</p>
+<h2 id="数值"><a class="header" href="#数值">数值</a></h2>
+<blockquote>
+<p>数值（number）也与C或者Java的数值非常相似</p>
+</blockquote>
+<p>其完整描述为</p>
+<p><img src="https://www.json.org/img/number.png" alt="数值描述" /></p>
+<p>可以看到 JSON 支持正负数, 小数和科学计数法, 我们可以使用 <code>alt</code> 和 <code>be_f32</code> 等解析子组合进行解析, 但对于数值解析这样的常见需求, nom 提供了现成的 <a href="https://docs.rs/nom/5.1.1/nom/number/complete/fn.double.html">double</a> 函数.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use nom::number::complete::double;
+
+let parser = |s| {
+  double(s)
+};
+
+assert_eq!(parser(&quot;1.1&quot;), Ok((&quot;&quot;, 1.1)));
+assert_eq!(parser(&quot;123E-02&quot;), Ok((&quot;&quot;, 1.23)));
+assert_eq!(parser(&quot;123K-01&quot;), Ok((&quot;K-01&quot;, 123.0)));
+assert_eq!(parser(&quot;abc&quot;), Err(Err::Error((&quot;abc&quot;, ErrorKind::Float))));
+<span class="boring">}
+</span></code></pre></pre>
+<p>而且在 nom 5 使用了 <a href="https://crates.io/crates/lexical-core">lexical crate</a> 解析浮点数, 相比 nom 4, 浮点数解析快了 98%, 我们可以放心使用 nom 进行浮点数解析.</p>
+<h2 id="字符串"><a class="header" href="#字符串">字符串</a></h2>
+<blockquote>
+<p>字符串（string）是由双引号包围的任意数量Unicode字符的集合，使用反斜线转义。一个字符（character）即一个单独的字符串（character string）</p>
+</blockquote>
+<p><img src="https://www.json.org/img/string.png" alt="字符串描述" /></p>
+<p>从图中可以看到左引号之后有3种情况, 最特殊的情况为两个引号之间无任何元素, 即空字符,
+其他两种情况我们可以使用 <code>delimited</code> 去掉两端的引号, 拿到字符串内容.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn string(i: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    context(
+        &quot;string&quot;,
+        alt((tag(&quot;\&quot;\&quot;&quot;), delimited(tag(&quot;\&quot;&quot;), parse_str, tag(&quot;\&quot;&quot;)))),
+    )(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>这里使用 <code>context</code> 为我们解析提供了一个上下文信息, 因为 <code>parse_str</code> 函数比较复杂, 涉及很多基本解析, 容易与数值, 数组, 对象等解析错误抛出的信息混淆,
+添加一个上下文环境可让让我们方便地知道是在解析 string 时出了问题.
+之后的测试中将会展示 <code>context</code> 为我们提供的额外信息.</p>
+<p>现在我们要实现关键的 <code>parse_str</code> 函数, 我们面临的最大难题是处理转义字符, nom 同样为我们提供了处理转义字符的函数 <code>escaped</code>.
+这个函数签名为 <code>escaped(normal, control, escapable)</code>, 即接受三个参数, <code>normal</code> 为判断普通字符函数, 必须不含有控制符 <code>control</code>, <code>escapable</code> 则是可以转义的字符.
+官方文档的例子可以更形象地展示其用法:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use nom::bytes::complete::escaped;
+use nom::character::complete::one_of;
+
+fn esc(s: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+  escaped(digit1, '\\', one_of(r#&quot;&quot;n\&quot;#))(s)
+}
+
+assert_eq!(esc(&quot;123;&quot;), Ok((&quot;;&quot;, &quot;123&quot;)));
+assert_eq!(esc(r#&quot;12\&quot;34;&quot;#), Ok((&quot;;&quot;, r#&quot;12\&quot;34&quot;#)));
+<span class="boring">}
+</span></code></pre></pre>
+<p>所以 <code>parse_str</code> 可以这样实现:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn parse_str(i: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    escaped(normal, '\\', escapable)(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>normal</code> 同样是一个解析函数, 按照标准中描述的</p>
+<blockquote>
+<p>Any codepoint except &quot; or \ or control characters</p>
+</blockquote>
+<p>我们只需要一直消耗输入, 直到碰上 &quot; \ 或控制字符, <code>take_till1</code> 就可以实现我们的需求, 它与 <code>take_while</code> 用法相似.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn normal(i: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    take_till1(|c: char| c == '\\' || c == '&quot;' || c.is_ascii_control())(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>注意, 这里使用了 <code>take_till1</code>, 即至少需要消耗1个char, 如果使用 <code>take_till</code>, 会导致 <code>escaped</code> 内部无限循环, 感兴趣的可以查看 <a href="https://docs.rs/nom/5.1.1/src/nom/bytes/complete.rs.html#446-502">escaped实现源码</a>.</p>
+<p>处理可转义字符的 <code>escapable</code> 函数除了处理16进制稍微麻烦点外, 可以使用 <code>alt</code> 和 <code>tag</code> 实现.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn escapable(i: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    context(
+        &quot;escaped&quot;,
+        alt((
+            tag(&quot;\&quot;&quot;),
+            tag(&quot;\\&quot;),
+            tag(&quot;/&quot;),
+            tag(&quot;b&quot;),
+            tag(&quot;f&quot;),
+            tag(&quot;n&quot;),
+            tag(&quot;r&quot;),
+            tag(&quot;t&quot;),
+            parse_hex,
+        )),
+    )(i)
+}
+
+fn parse_hex(i: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    context(
+        &quot;hex string&quot;,
+        preceded(
+            peek(tag(&quot;u&quot;)),
+            take_while_m_n(5, 5, |c: char| c.is_ascii_hexdigit() || c == 'u'),
+        ),
+    )(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>parse_hex</code> 使用了 <code>peek</code>, 这个函数的不同之处在于它会尝试对输入应用解析函数, 而不消耗输入. 以上面的代码为例, 假设输入为 <code>i = &quot;u1234&quot;</code>, <code>peek(tag(&quot;u&quot;)</code> 应用之后传入 <code>take_while_m_n</code> 的输入依然为 <code>&quot;u1234&quot;</code>, 若只使用<code>tag(&quot;u&quot;)</code>, <code>take_while_m_n</code> 接收到的只有 <code>1234</code>.</p>
+<h2 id="值"><a class="header" href="#值">值</a></h2>
+<blockquote>
+<p>值（value）可以是双引号括起来的字符串（string）、数值(number)、true、false、 null、对象（object）或者数组（array）。这些结构可以嵌套。</p>
+</blockquote>
+<p><img src="https://www.json.org/img/value.png" alt="值描述" /></p>
+<p>可以看到值的解析比较简单, 空白,字符串和数字的解析我们都已经完成了, 剩下的只有基本类型 <code>true</code>, <code>false</code> 和 <code>null</code> 以及复合类型 <code>object</code> 和 <code>array</code>.</p>
+<p>先完成基本类型解析</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn boolean(i: &amp;str) -&gt; IResult&lt;&amp;str, bool&gt; {
+    let parse_true = n_value(true, tag(&quot;true&quot;));
+    let parse_false = n_value(false, tag(&quot;false&quot;));
+    alt((parse_true, parse_false))(i)
+}
+
+fn null(i: &amp;str) -&gt; IResult&lt;&amp;str, JsonValue&gt; {
+    map(tag(&quot;null&quot;), |_| JsonValue::Null)(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>在解析布尔值时使用了 <code>n_value</code>, 它其实是 <code>nom::combinator::value</code>, 只不过被我重命名为 <code>n_value</code>, 这个函数会在子解析成功时返回提供的值,
+以上面代码为例, 如果 <code>tag(&quot;true&quot;)</code> 成功, 那么 <code>n_value(true, tag(&quot;true&quot;))</code> 将返回 <code>true</code>.</p>
+<p><code>object</code> 和 <code>array</code> 的实现暂时不管, 值的解析可以写为</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn value(i: &amp;str) -&gt; IResult&lt;&amp;str, JsonValue&gt; {
+    context(
+        &quot;value&quot;,
+        delimited(
+            multispace0,
+            alt((
+                map(object, JsonValue::Object),
+                map(array, JsonValue::Array),
+                map(string, |s| JsonValue::Str(String::from(s))),
+                map(double, JsonValue::Num),
+                map(boolean, JsonValue::Boolean),
+                null,
+            )),
+            multispace0,
+        ),
+    )(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>在实现 <code>value</code> 时使用了一个小 trick, <code>map</code> 的第二个参数应该是一个匿名函数, 如 <code>map(string, |s| JsonValue::Str(String::from(s)))</code> 这样的写法,
+但 Rust 枚举成员构造函数本身就是一个匿名函数, 所以 <code>map(double, |num: f64| JsonValue::Num(num))</code> 可以简化为 <code>map(double, JsonValue::Num)</code>.</p>
+<h2 id="数组"><a class="header" href="#数组">数组</a></h2>
+<blockquote>
+<p>数组是值（value）的有序集合。一个数组以 [左中括号 开始， ]右中括号 结束。值之间使用 ,逗号 分隔。</p>
+</blockquote>
+<p><img src="https://www.json.org/img/array.png" alt="数组描述" /></p>
+<p>我们用 <code>delimited</code> 去掉左右方括号, 然后利用 <code>separated_list</code> 对方括号剑的内容进行解析, 得到 <code>Vec&lt;JsonValue&gt;</code></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn array(i: &amp;str) -&gt; IResult&lt;&amp;str, Vec&lt;JsonValue&gt;&gt; {
+    context(
+        &quot;array&quot;,
+        delimited(
+            tag(&quot;[&quot;),
+            separated_list(tag(&quot;,&quot;), delimited(multispace0, value, multispace0)),
+            tag(&quot;]&quot;),
+        ),
+    )(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>需要注意的是, 在 <code>value</code> 两侧可能会有空白, 如</p>
+<pre><code class="language-json">{ &quot;array&quot;:                 [&quot;ab&quot;,     &quot;cd&quot;   , &quot;ef&quot; ]}
+</code></pre>
+<p>这些空白不会被 <code>value</code> 消耗, 需要将其视为数组某元素内容, 在解析时消耗掉.</p>
+<h2 id="对象"><a class="header" href="#对象">对象</a></h2>
+<blockquote>
+<p>对象是一个无序的“‘名称/值’对”集合。一个对象以 {左括号 开始， }右括号 结束。每个“名称”后跟一个 :冒号 ；“‘名称/值’ 对”之间使用 ,逗号 分隔。</p>
+</blockquote>
+<p><img src="https://www.json.org/img/object.png" alt="对象描述" /></p>
+<p>对象结构与数组类似, 不同的是我们需要解析键和值, 然后把他们拼接起来.
+先实现键的解析.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn key(i: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    delimited(multispace0, string, multispace0)(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>值解析我们已经实现, 现在需要把他们拼起来</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn object(i: &amp;str) -&gt; IResult&lt;&amp;str, HashMap&lt;String, JsonValue&gt;&gt; {
+    context(
+        &quot;object&quot;,
+        delimited(
+            tag(&quot;{&quot;),
+            map(
+                separated_list(
+                    tag(&quot;,&quot;),
+                    separated_pair(key, tag(&quot;:&quot;), delimited(multispace0, value, multispace0)),
+                ),
+                |tuple_vec: Vec&lt;(&amp;str, JsonValue)&gt;| {
+                    tuple_vec
+                        .into_iter()
+                        .map(|(k, v)| (String::from(k), v))
+                        .collect()
+                },
+            ),
+            tag(&quot;}&quot;),
+        ),
+    )(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>object</code> 实现有些复杂, 最外层的 <code>delimited</code> 去掉左右大括号, 接着用 <code>map</code> 对 <code>separated_list</code> 解析得到的 <code>Vec&lt;(&amp;str, JsonValue)&gt;</code> 进行转换, 得到预期的 <code>Hashmap&lt;String, JsonValue&gt;</code>.</p>
+<p>对于每个键值对我们都用 <code>separated_pair</code> 去掉分隔符, 得到键值.</p>
+<p>最后需要对顶层结构进行解析, 一个顶层结构类型只能是对象或数组</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn root(i: &amp;str) -&gt; IResult&lt;&amp;str, JsonValue&gt; {
+    delimited(
+        multispace0,
+        alt((map(object, JsonValue::Object), map(array, JsonValue::Array))),
+        multispace0,
+    )(i)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>至此一个 JSON parse 已经完成了, 如果想查看完整代码和测试可以到我的 repo <a href="https://github.com/PrivateRookie/jsonparse">PrivateRookie/jsonparse</a>
+查看.</p>
+<p>整个项目代码包括测试代码共 263 行</p>
+<pre><code class="language-bash">-------------------------------------------------------------------------------
+ Language            Files        Lines         Code     Comments       Blanks
+-------------------------------------------------------------------------------
+ Markdown                1            2            2            0            0
+ Rust                    2          277          254            0           23
+ TOML                    1           10            7            1            2
+-------------------------------------------------------------------------------
+ Total                   4          289          263            1           25
+-------------------------------------------------------------------------------
+</code></pre>
+<p>比上次解析 redis 协议的项目代码行数还要少, 可见 nom 配合 Rust 可以取得很好的表达能力. 但这个项目没有经过完整测试, 同时没没有进行性能测试, 有兴趣的可以去尝试.</p>
+<p>下一期按计划应该是使用 nom 实现一门语言, 但这样的话只介绍了 nom 解析文本的能力, 其实 nom 可以解析二进制, 比如 mysql binlog. 下次什么内容什么时间还是看心情吧😊.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../posts/2020-05-10-使用nom写parser.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../posts/2020-06-25-Rust实现的日至收集工具.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../posts/2020-05-10-使用nom写parser.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../posts/2020-06-25-Rust实现的日至收集工具.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lunr.zh.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

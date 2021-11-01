@@ -1,0 +1,857 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rust模块与文件 - 夜雨秋灯录</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../导言.html">导言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../文章.html"><strong aria-hidden="true">1.</strong> 文章</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../posts/2018-06-24-openstack创建虚拟机源码阅读.html"><strong aria-hidden="true">1.1.</strong> openstack创建虚拟机源码阅读</a></li><li class="chapter-item "><a href="../posts/2018-06-27-Bottle-框架中装饰器类和描述符应用.html"><strong aria-hidden="true">1.2.</strong> Bottle-框架中装饰器类和描述符应用</a></li><li class="chapter-item "><a href="../posts/2019-04-17-使用devpi搭建本地源.html"><strong aria-hidden="true">1.3.</strong> 使用devpi搭建本地源</a></li><li class="chapter-item "><a href="../posts/2019-04-20-Python展开嵌套序列.html"><strong aria-hidden="true">1.4.</strong> Python展开嵌套序列</a></li><li class="chapter-item "><a href="../posts/2019-04-20-pipenv-使用简介.html"><strong aria-hidden="true">1.5.</strong> pipenv-使用简介</a></li><li class="chapter-item "><a href="../posts/2019-04-22-深度系统rust开发环境搭建.html"><strong aria-hidden="true">1.6.</strong> 深度系统rust开发环境搭建</a></li><li class="chapter-item "><a href="../posts/2019-05-01-miniserve-miniserve简单美观的文件服务器.html"><strong aria-hidden="true">1.7.</strong> miniserve-miniserve简单美观的文件服务器</a></li><li class="chapter-item "><a href="../posts/2019-05-05-magnum-stein-release-new-features.html"><strong aria-hidden="true">1.8.</strong> magnum-stein-release-new-features</a></li><li class="chapter-item "><a href="../posts/2019-05-12-rust-rc.html"><strong aria-hidden="true">1.9.</strong> rust-rc</a></li><li class="chapter-item "><a href="../posts/2019-05-20-Python-Rust-迭代器类比.html"><strong aria-hidden="true">1.10.</strong> Python-Rust-迭代器类比</a></li><li class="chapter-item "><a href="../posts/2019-06-28-搭建etcd服务发现服务.html"><strong aria-hidden="true">1.11.</strong> 搭建etcd服务发现服务</a></li><li class="chapter-item "><a href="../posts/2019-07-03-OpenStack允许root用户使用ssh-key登录.html"><strong aria-hidden="true">1.12.</strong> OpenStack允许root用户使用ssh-key登录</a></li><li class="chapter-item "><a href="../posts/2019-07-06-requirements.txt文件指定依赖.html"><strong aria-hidden="true">1.13.</strong> requirements.txt文件指定依赖</a></li><li class="chapter-item "><a href="../posts/2019-07-10-我经常使用的Rust小crate.html"><strong aria-hidden="true">1.14.</strong> 我经常使用的Rust小crate</a></li><li class="chapter-item expanded "><a href="../posts/2019-07-14-Rust模块与文件.html" class="active"><strong aria-hidden="true">1.15.</strong> Rust模块与文件</a></li><li class="chapter-item "><a href="../posts/2019-07-18-Deepin安装Angular10+.html"><strong aria-hidden="true">1.16.</strong> Deepin安装Angular10+</a></li><li class="chapter-item "><a href="../posts/2019-07-25-使用OSProfiler.html"><strong aria-hidden="true">1.17.</strong> 使用OSProfiler</a></li><li class="chapter-item "><a href="../posts/2019-07-27-windows上使用vscode-remote.html"><strong aria-hidden="true">1.18.</strong> windows上使用vscode-remote</a></li><li class="chapter-item "><a href="../posts/2019-08-04-使用rust-analyzer.html"><strong aria-hidden="true">1.19.</strong> 使用rust-analyzer</a></li><li class="chapter-item "><a href="../posts/2019-08-16-Python-package安装时安装额外文件.html"><strong aria-hidden="true">1.20.</strong> Python-package安装时安装额外文件</a></li><li class="chapter-item "><a href="../posts/2019-08-31-Rust-命令行工具.html"><strong aria-hidden="true">1.21.</strong> Rust-命令行工具</a></li><li class="chapter-item "><a href="../posts/2019-09-27-Fedora-CoreOS-尝鲜.html"><strong aria-hidden="true">1.22.</strong> Fedora-CoreOS-尝鲜</a></li><li class="chapter-item "><a href="../posts/2020-01-31-rust代码风格tips.html"><strong aria-hidden="true">1.23.</strong> rust代码风格tips</a></li><li class="chapter-item "><a href="../posts/2020-02-03-log4rs-Rust-log库.html"><strong aria-hidden="true">1.24.</strong> log4rs-Rust-log库</a></li><li class="chapter-item "><a href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html"><strong aria-hidden="true">1.25.</strong> impl-Trait-vs-dyn-Trait</a></li><li class="chapter-item "><a href="../posts/2020-03-04-nom-cheatsheet.html"><strong aria-hidden="true">1.26.</strong> nom-cheatsheet</a></li><li class="chapter-item "><a href="../posts/2020-03-09-gitlab-runner启动守护进程.html"><strong aria-hidden="true">1.27.</strong> gitlab-runner启动守护进程</a></li><li class="chapter-item "><a href="../posts/2020-03-21-使用nom写parser.html"><strong aria-hidden="true">1.28.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-05-10-使用nom写parser.html"><strong aria-hidden="true">1.29.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-07-使用nom写parser.html"><strong aria-hidden="true">1.30.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-25-Rust实现的日至收集工具.html"><strong aria-hidden="true">1.31.</strong> Rust实现的日至收集工具</a></li><li class="chapter-item "><a href="../posts/2020-07-19-typing+pyright-更正确的Python代码.html"><strong aria-hidden="true">1.32.</strong> typing+pyright-更正确的Python代码</a></li><li class="chapter-item "><a href="../posts/2020-07-31-boxercrab发布.html"><strong aria-hidden="true">1.33.</strong> boxercrab发布</a></li><li class="chapter-item "><a href="../posts/2020-08-16-使用nom写parser.html"><strong aria-hidden="true">1.34.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-08-30-PowerShell配置.html"><strong aria-hidden="true">1.35.</strong> PowerShell配置</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../笔记.html"><strong aria-hidden="true">2.</strong> 笔记</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../notes/rust/2021-10-31-嵌套解构.html"><strong aria-hidden="true">2.1.</strong> 嵌套解构</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">夜雨秋灯录</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="rust-模块和文件---译"><a class="header" href="#rust-模块和文件---译">Rust 模块和文件 - [译]</a></h1>
+<p>原文链接：<a href="https://amos.me/blog/2019/rust-modules-vs-files/">amos.me - Rust modules vs files</a></p>
+<hr />
+<p>不久前，我在推特上发起了 <a href="https://twitter.com/fasterthanlime/status/1142183262779052051">Rust 有什么让人困惑的</a>
+话题，热度最高的主题是“模块系统是怎么映射到文件的？”。</p>
+<p>我记得刚接触 Rust 时模块让我痛苦挣扎，所以我尝试用一种我认为说得通的方式解释它。</p>
+<h2 id="要点"><a class="header" href="#要点">要点</a></h2>
+<p>以下所述均使用 Rust 2018 版本。我没有兴趣学习（或教授）老版本的细节，特别是因为老版本让我更加困惑。</p>
+<p>如果你有现存的项目，你可以查看 <code>Cargo.toml</code> 文件中的 <code>edtion</code> 查看项目使用的 Rust 版本。
+如果没有，那现在就加上 <code>edition = 2018</code>。</p>
+<p>如果使用最新的 Rust 且通过 <code>cargo new/ cargo init</code> 来创建新项目，新项目会自动选择 2018 版本。</p>
+<h2 id="什么是-crate"><a class="header" href="#什么是-crate">什么是 crate</a></h2>
+<p>一个 crate 通常来说是一个项目。它有一个 <code>Cargo.toml</code> 文件，这个文件用于声明依赖，入口，构建选项等项目元数据。
+每个 crate 可以独立地在 <a href="https://crates.io/">https://crates.io/</a> 上发表。</p>
+<p>假设我们要创建一个二进制（可执行）项目：</p>
+<ul>
+<li><code>cargo new --bin</code>（或者在已有项目上用 <code>cargo init --bin</code>）会为新 crate 生成一个 <code>Cargo.toml</code> 文件。</li>
+<li>项目入口为 <code>src/main.rs</code></li>
+</ul>
+<p>对于二进制项目，<code>src/main.rs</code> 是项目主模块的常用路径。它不一定是精确的路径,可以在 <code>Cargo.toml</code> 添加相应配置 <sup class="footnote-reference"><a href="#1">1</a></sup>，使编译器在别处查看(甚至可以有多个目标二进制文件和多个目标库)。</p>
+<p>默认情况下，我们的可执行项目的 <code>src/main.rs</code> 如下：</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    println!(&quot;Hello world!&quot;);
+}
+</code></pre></pre>
+<p>我们可以通过 <code>cargo run</code> 构建和运行这个项目，若只想构建项目，则运行 <code>cargo build</code></p>
+<p>构建一个 crate 的时候，cargo 下载并编译所有所需依赖，默认情况下把临时文件和最终生成文件放入 <code>./target/</code> 目录下。
+cargo 既是包管理器又是构建系统。</p>
+<h2 id="crate-依赖"><a class="header" href="#crate-依赖">crate 依赖</a></h2>
+<p>让我们向刚才创建的 crate 添加 <code>rand</code> 依赖来看看命名空间是怎么工作的。我们需要修改 <code>Cargo.toml</code>，其内容如下：</p>
+<pre><code class="language-toml">[package]
+name = &quot;modules&quot;
+version = &quot;0.1.0&quot;
+edition = &quot;2018&quot;
+
+[dependencies]
+rand = &quot;0.7.0&quot;
+</code></pre>
+<p>如果我们想学习如何使用 <code>rand</code> crate，有以下几种方式：</p>
+<ul>
+<li>rand 的 <a href="https://crates.io/crates/rand">crates.io.page</a> - 上面通常包含了一个类似 README 文件，包含了简要描述和一些代码示例</li>
+<li>rand 的 <a href="https://rust-random.github.io/rand/rand/index.html">文档</a>（在 crates.io 页面标题或最新版本下有链接）。需要注意的是所有发表在 crates.io 的 crate 会在 <a href="https://docs.rs">https://docs.rs</a> 上生成文件 - 我不确定为什么 rand 也文档部署在它自己的网页，或许它早于 docs.rs？</li>
+<li>它的 <a href="https://github.com/rust-random/rand">源码页</a>，如果其他方式（如 crates.io 的链接和自动生成的文档）失败了的化</li>
+</ul>
+<p>现在让我们在 <code>src/main.rs</code> 里使用 <code>rand</code>, <code>src/main.rs</code> 如下：</p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let random_boolean = rand::random();
+    println!(&quot;You {}!&quot;, if random_boolean { &quot;win&quot; } else { &quot;lose&quot; });
+}
+</code></pre></pre>
+<p>请注意：</p>
+<ul>
+<li>我们不需要使用 <code>use</code> 指令来使用 <code>rand</code> - 它在项目下的文件全局可用，因为它在 <code>Cargo.toml</code> 中被声明为依赖（rust 2018之前的版本则不是这样）</li>
+<li>我们完全没必要使用 <code>mod</code> （稍后讲述）</li>
+</ul>
+<p>为了明白这篇博客的余下部分，你需要明白 rust 模块仅仅是命名空间 - 他们让你把相关符号组合在一起并保证可见性规则。</p>
+<ul>
+<li>我们的 crate 有一个主模块（我们现在所在），它的源在 <code>src/main.rs</code></li>
+<li><code>rand</code> crate 也有一个入口。因为他是一个库，默认情况下其主入口为 <code>src/lib.rs</code></li>
+<li>在我们主模块范围，我们可以在主模块通过依赖名称使用依赖</li>
+</ul>
+<p>总之，我们现在只处理两个模块：我们项目主入口还有 <code>rand</code> 的入口。</p>
+<h2 id="use-指令"><a class="header" href="#use-指令">use 指令</a></h2>
+<p>如果我们不喜欢一直这样写 <code>rand::random()</code>，我们可以把 <code>random</code> 注入主模块范围。</p>
+<pre><pre class="playground"><code class="language-rust">use rand::random;
+// 我们可以通过 `rand::random()` 或 `random()` 来使用它
+
+fn main() {
+    if random() &amp;&amp; random() {
+        println!(&quot;You won twice in a row!&quot;);
+    } else {
+        println!(&quot;Try again...&quot;);
+    }
+}
+</code></pre></pre>
+<p>我们也可以使用通配符来导入 <code>rand</code> 主模块导出的所有符号。</p>
+<pre><pre class="playground"><code class="language-rust">// 这会导入 random，还有 thead_rng 等
+use rand::*;
+
+fn main() {
+    if random() {
+        panic!(&quot;Unlucky coin toss&quot;);
+    }
+    println!(&quot;Hello world&quot;);
+}
+</code></pre></pre>
+<h2 id="模块不需要在分开的文件里"><a class="header" href="#模块不需要在分开的文件里">模块不需要在分开的文件里</a></h2>
+<p>正如刚才所见，模块是一个让你组合相关符号的语言结构。</p>
+<p>你<em>不需要</em>把他们放在不同的文件下。</p>
+<p>让我们修改下 <code>src/main.rs</code> 来证明这个观点：</p>
+<pre><pre class="playground"><code class="language-rust">mod math {
+    pub fn add(x: i32, y: i32) -&gt; i32 {
+        x + y
+    }
+    // 使用 `pub` 来导出 `add()` 函数
+    // 如果不这样做，`add()` 会变为 `math` 模块的私有函数
+    // 我们将无法在 `math` 模块外使用它
+}
+
+fn main() {
+    let result = math::add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<p>从范围角度，我们项目结构如下：</p>
+<pre><code class="language-text">我们 crate 的主模块
+    `math`: 我们的 `math` 模块
+    `rand`: `rand` crate 的主模块
+</code></pre>
+<p>从文件角度，主模块和 <code>math</code> 模块都在同一个文件 <code>src/main.rs</code> 下。</p>
+<h2 id="模块可以在可分开的文件中"><a class="header" href="#模块可以在可分开的文件中">模块可以在可分开的文件中</a></h2>
+<p>现在，如果我们如下修改项目：</p>
+<p><code>src/math.rs</code></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn add(x: i32, y: i32) -&gt; i32 {
+    x + y
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>src/main.rs</code></p>
+<pre><pre class="playground"><code class="language-rust">fn main() {
+    let result = math::add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<p>然而这行不通。</p>
+<pre><code class="language-bash">Compiling modules v0.1.0 (/home/amos/Dev/modules)
+error[E0433]: failed to resolve: use of undeclared type or module `math`
+ --&gt; src/main.rs:2:18
+  |
+2 |     let result = math::add(1, 2);
+  |                  ^^^^ use of undeclared type or module `math`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0433`.
+error: Could not compile `modules`.
+
+To learn more, run the command again with --verbose.
+</code></pre>
+<p>虽然 <code>src/main.rs</code> 和 <code>src/lib.rs</code>（二进制和库项目）会被 cargo 自动识别为程序入口，其他文件则需要在文件中明确声明。</p>
+<p>我们的错误在于仅仅创建了 <code>src/math.rs</code> 文件，希望 cargo 会在构建时找到它，但事实上并不是这样的。cargo 甚至不会解析它。
+<code>cargo check</code> 命令也不会报错，因为 <code>src/math.rs</code> 现在还不是 crate 源文件的一部分。</p>
+<p>为了改正这个错误，可以如下修改 <code>src/main.rs</code>（因为它时项目入口，这是 cargo 已知的）:</p>
+<pre><pre class="playground"><code class="language-rust">mod math {
+    include!(&quot;math.rs&quot;);
+}
+// 注意: 这不是符合 rust 风格的写法，仅作 mod 学习用
+
+fn main() {
+    let result = math::add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<p>现在 crate 可以编译和运行了，因为：</p>
+<ul>
+<li>我们定义了一个名为 <code>math</code> 的模块</li>
+<li>我们告诉编译器复制/粘贴其他文件（<code>math.rs</code>）到模块代码块中
+<ul>
+<li>参考 <a href="https://doc.rust-lang.org/stable/std/macro.include.html">include! 文档</a></li>
+</ul>
+</li>
+</ul>
+<p>但这不是通常导入模块的方式。按照惯例，如果使用不跟随代码块的 <code>mod</code> 指令，效果上述一样。</p>
+<p>所以也可以这样写：</p>
+<pre><pre class="playground"><code class="language-rust">mod math;
+
+fn main() {
+    let result = math::add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<p>就是这么简单。但容易混淆之处在于，根据 <code>mod</code> 之后是否有代码块，它可以内联定义模块，或者导入其他文件。</p>
+<p>这也解释了为什么在 <code>src/math.rs</code> 里不用再定义另一个 <code>mod math {}</code>。因为 <code>src/math.rs</code> 已经在
+<code>src/main.rs</code> 中导入，它已经说 <code>src/math.rs</code> 的代码存在于一个名为 <code>math</code> 的模块中。</p>
+<h2 id="那-use-呢"><a class="header" href="#那-use-呢">那 <code>use</code> 呢</a></h2>
+<p>现在我们几乎了解了 <code>mod</code>，那 <code>use</code> 呢？</p>
+<p><code>use</code> 的唯一目的是<em>将符号带入命名空间</em>，让符号使用更加简短。</p>
+<p>特别是，<code>use</code> <strong>永远不会告诉编译器去编译 mod 导入文件之外的其他文件</strong>。</p>
+<p>在 <code>main.rs</code>/<code>math.rs</code> 例子中，在 <code>src/main.rs</code> 写下如下语句时：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>mod math;
+<span class="boring">}
+</span></code></pre></pre>
+<p>我们在主模块导入一个名为 <code>math</code> 模块，这个模块导出 <code>add</code> 函数。</p>
+<p>从范围角度，结构如下：</p>
+<pre><code class="language-text">crate 主模块(我们在这儿)
+  `math` 模块
+    `add` 函数
+</code></pre>
+<p>这就是为什么我们要使用 <code>add</code> 函数时要这样引用 <code>math::add</code>，即从主模块到 <code>add</code> 函数的正确路径。</p>
+<p>请注意，如果我们从另一个模块调用 <code>add</code>，那么 <code>math::add</code> 可能不是有效路径。
+然而，<code>add</code> 有一个更长的添加路径，即 <code>crate::math::add</code> - 它在我们的 crate 中的任何位置都有效（只要 <code>math</code> 模块保持原样）。</p>
+<p>所以，如果我们不想每次都使用 <code>math::</code> 前缀调用 <code>add</code>，可以用 <code>use</code> 指令：</p>
+<pre><pre class="playground"><code class="language-rust">mod math;
+use math::add;
+
+fn main() {
+    // 看，没有前缀了！
+    let result = add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<h2 id="那-modrs-又是什么呢"><a class="header" href="#那-modrs-又是什么呢">那 <code>mod.rs</code> 又是什么呢？</a></h2>
+<p>好吧，我说谎了 - 我们还没完全了解 <code>mod</code>。</p>
+<p>目前，crate 有一个漂亮又扁平的文件结构：</p>
+<pre><code class="language-bash">src/
+    main.rs
+    math.rs
+</code></pre>
+<p>这是有道理的，因为 <code>math</code> 是一个小模块（只有一个函数），它并不需要拥有自己的文件夹。但我们也可以这样改变它的结构：</p>
+<pre><code class="language-bash">src/
+    main.rs
+    math/
+        mod.rs
+</code></pre>
+<p>（对于那些熟悉 node.js 的人来说，<code>mod.rs</code> 类似于 <code>index.js</code>）。</p>
+<p>就命名空间/范围而言，两种结构都是等价的。我们的新 <code>src/math/mod.rs</code> 与<code>src/math.rs</code>具有完全相同的内容，
+并且我们的 <code>src/main.rs</code> 完全不变。</p>
+<p>事实上，如果如果我们定义了 <code>math</code> 模块的子模块， <code>folder/mod.rs</code> 结构更加易于理解。</p>
+<p>假设我们想添加一个 <code>sub</code> 函数，因为我们强制执行“一个函数一个文件”的限制，我们希望 <code>add</code> 和 <code>sub</code> 存在于各自的模块中。</p>
+<p>我们现在的文件结构如下：</p>
+<pre><code class="language-bash">src/
+    main.rs
+    math/
+        mod.rs
+        add.rs (新文件!)
+        sub.rs (也是新文件!)
+</code></pre>
+<p>概念上而言，命名空间树如下：</p>
+<pre><code class="language-bash">crate (src/main.rs)
+    `math` 模块 (src/math/mod.rs)
+        `add` 模块 (src/math/add.rs)
+        `sub` 模块 (src/math/sub.rs)
+</code></pre>
+<p>我们的 <code>src/main.rs</code> 不需要做很大改动 - <code>math</code> 仍在相同位置。我们只是让它使用 <code>add</code> 和 <code>sub</code>：</p>
+<pre><pre class="playground"><code class="language-rust">// 保证 math 在 `./math.rs` 或 `./math/mod.rs` 中定义
+mod math;
+
+// 将两个符号带入范围，在 `math` 模块中保证都已导出
+use math::{add, sub};
+
+fn main() {
+    let result = add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<p>我们的 <code>src/math/add.rs</code> 正如我们在 <code>math</code> 模块做的一样：定义一个函数，并用 <code>pub</code> 将其导出。</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn add(x: i32, y: i32) -&gt; i32 {
+    x + y
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>类似地，<code>src/math/sub.rs</code> 文件如下：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn sub(x: i32, y: i32) -&gt; i32 {
+    x - y
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>现在来看 <code>src/math/mod.rs</code>。我们知道 cargo 知道 <code>math</code> 这个模块存在，
+因为 <code>src/main.rs</code> 中的 <code>mod math;</code> 语句已将其导入。
+但我们需要让 cargo 也知道 <code>add</code> 和 <code>sub</code> 模块。</p>
+<p>所以我们需要在 <code>src/math/mod.rs</code> 添加如下语句；</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>mod add;
+mod sub;
+<span class="boring">}
+</span></code></pre></pre>
+<p>现在 cargo 知晓所有源文件。</p>
+<p>crate 能编译成功吗？（剧透一下：没有哦）</p>
+<pre><code class="language-bash">   Compiling modules v0.1.0 (/home/amos/Dev/modules)
+error[E0603]: module `add` is private
+ --&gt; src/main.rs:2:12
+  |
+2 | use math::{add, sub};
+  |            ^^^
+
+error[E0603]: module `sub` is private
+ --&gt; src/main.rs:2:17
+  |
+2 | use math::{add, sub};
+  |                 ^^^
+</code></pre>
+<p>发生了什么？好吧，按现在的写法，主模块看起来是这样的：</p>
+<pre><code class="language-text">crate (我们在这儿)
+    `math` 模块
+        （空的）
+</code></pre>
+<p>所以 <code>math::add</code> 不是一个有效路径，因为 <code>math</code> 模块没有导出任何东西。</p>
+<p>好吧，我猜我们可以直接在 <code>mod</code> 前加上 <code>pub</code>？</p>
+<p>将 <code>src/math/mod.rs</code> 做如下修改：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub mod add;
+pub mod sub;
+<span class="boring">}
+</span></code></pre></pre>
+<p>又一次，编译不通过：</p>
+<pre><code class="language-bash">   Compiling modules v0.1.0 (/home/amos/Dev/modules)
+error[E0423]: expected function, found module `add`
+ --&gt; src/main.rs:5:18
+  |
+5 |     let result = add(1, 2);
+  |                  ^^^ not a function
+help: possible better candidate is found in another module, you can import it into scope
+  |
+2 | use crate::math::add::add;
+  |
+</code></pre>
+<p>rustc 给出了明确的信息 - 现在我们公开了 <code>add</code> 和 <code>sub</code> 模块，我们的 crate 模块结构如下：</p>
+<pre><code class="language-bash">crate (我们在这)
+    `math` 模块
+        `add` 模块
+            `add` 函数
+        `sub` 模块
+            `sub` 函数
+</code></pre>
+<p>但这和期望略有差距。<code>math</code> 的两个子模块组成涉及实现细节。我们并不希望导出这两个模块 - 我们也不希望任何人直接导入这两个模块！</p>
+<p>所以回到声明和导入子模块的地方，让这两个模块变为私有，然后分别重新导出它们的 <code>add</code> 和 <code>sub</code> 函数。</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// 子模块是私有的
+mod add;
+mod sub;
+
+// 这些是重导出函数
+pub use add::add;
+pub use sub::sub;
+<span class="boring">}
+</span></code></pre></pre>
+<p>这样改变后，从 <code>src/math/mod.rs</code> 角度看，模块结构如下：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>`math` 模块（我们在这）
+    `add` 函数（公开）
+    `sub` 函数（公开）
+    `add` 模块（私有）
+        `add` 函数（公开）
+    `sub` 模块（私有）
+        `sub` 函数（公开）
+<span class="boring">}
+</span></code></pre></pre>
+<p>然而，从 <code>src/main.rs</code> 角度看，模块结构如下：</p>
+<pre><code class="language-bash">crate （你在这）
+    `math` 模块
+        `add` 模块
+        `sub` 模块
+</code></pre>
+<p>我们已经成功隐藏 <code>math</code> 模块的实现细节 - 只有 <code>add</code> 和 <code>sub</code> 函数被导出。</p>
+<p>果然，现在 crate 编译成功且运行良好。</p>
+<h2 id="回顾"><a class="header" href="#回顾">回顾</a></h2>
+<p>回顾一下，这是目前完整的文件。</p>
+<p><code>src/main.rs</code></p>
+<pre><pre class="playground"><code class="language-rust">mod math;
+use math::{add, sub};
+
+fn main() {
+    let result = add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<p><code>src/math/mod.rs</code></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>mod add;
+mod sub;
+
+pub use add::add;
+pub use sub::sub;
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>src/math/add.rs</code></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn add(x: i32, y: i32) -&gt; i32 {
+    x + y
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>src/math/sub.rs</code></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn sub(x: i32, y: i32) -&gt; i32 {
+    x - y
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="未使用的导入和符号"><a class="header" href="#未使用的导入和符号">未使用的导入和符号</a></h2>
+<p>如果你用编辑器跟随写到现在，你会注意到 rustc（rust 编译器，由 cargo 调用）抛出一个 warning:</p>
+<pre><code class="language-bash">warning: unused import: `sub`
+ --&gt; src/main.rs:2:17
+  |
+2 | use math::{add, sub};
+  |                 ^^^
+  |
+  = note: #[warn(unused_imports)] on by default
+</code></pre>
+<p>的确，现在我们没有在主函数使用 <code>sub</code>。如果我们像下面那样在 <code>use</code> 指令中把它去掉会怎样？</p>
+<pre><pre class="playground"><code class="language-rust">mod math;
+use math::add;
+
+fn main() {
+    let result = add(1, 2);
+    println!(&quot;1 + 2 = {}&quot;, result);
+}
+</code></pre></pre>
+<p>现在 rust 又抛出了错误：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>warning: function is never used: `sub`
+ --&gt; src/math/sub.rs:1:1
+  |
+1 | pub fn sub(x: i32, y: i32) -&gt; i32 {
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: #[warn(dead_code)] on by default
+<span class="boring">}
+</span></code></pre></pre>
+<p>解释非常简单。目前在 crate 中，<code>sub</code> 没有在其他地方导出。它在 <code>src/math/sub.rs</code> 中定义，
+由 <code>src/math/mod.rs</code> 重新导出。<code>math</code> 模块在且仅在 <code>src/main.rs</code> 可用 - 但我们没有在主模块中使用它。</p>
+<p>所以我们让编译器去解析一个源文件，进行类型检查和所有权检查 - 但 <code>sub</code> 函数在最后的可执行文件并没有出现。即使我们想把
+crate 作为一个库，<code>sub</code> 函数依然不可用，因为它并没有在程序入口导出。</p>
+<p>我们有几个选项。如果想让 crate 既是一个可执行项目和库，仅需让 <code>math</code> 模块变为公开就可以了。</p>
+<p>在 <code>src/lib.rs</code> 里：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// 现在不必使用 `math` 模块里的所有符号，
+// 因为我们让他们对所有依赖可见。
+pub mod math;
+<span class="boring">}
+</span></code></pre></pre>
+<p>或者，我们可以去掉 <code>sub</code> 函数（毕竟我们没有它）。如果我们知道之后将会使用它，可以对某个函数关闭 <code>warning</code>：</p>
+<p>在 <code>src/math/sub.rs</code> 中：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// 这不是好主意
+#[allow(unused)]
+pub fn sub(x: i32, y: i32) -&gt; i32 {
+    x - y
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>但我真的推荐这样做。一旦添加这个注解很容易忘掉死代码。记住，寻找 <code>unused</code> 是很难的。
+这是源码控制该干的。但如果你想要，它仍是一个选择。</p>
+<p>但这确实回答了一个你可能一直在问自己的问题：“仅仅 <code>use</code> 我真正需要的东西是不是更好，所以剩下的不会被编译/包含在最终的二进制文件中吗？”。 答案是：没关系。</p>
+<p>使用通配符导入符号（如 <code>use::some_crate::*;</code>）的唯一害处是污染命名空间。但编译器还是会解析所有源文件，把没有使用的部分去掉（通过消灭死代码），不管命名空间有什么。</p>
+<h2 id="父模块"><a class="header" href="#父模块">父模块</a></h2>
+<p>目前我们仅使用了那些命名空间/符号树深处的符号。</p>
+<p>但如果需要，我们也可以使用父级命名空间里。</p>
+<p>假设我们希望 <code>math</code> 模块有一个模块级的常量来开启或关闭日志。</p>
+<p>（注意，这样控制日志是一个糟糕的做法，我只是暂时想不到其他愚蠢的例子）。</p>
+<p>现在将 <code>src/math/mod.rs</code> 做如下修改：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>mod add;
+mod sub;
+
+pub use add::add;
+pub use sub::sub;
+
+const DEBUG: bool = true;
+<span class="boring">}
+</span></code></pre></pre>
+<p>然后我们可以在其他模块引用 <code>DEBUG</code>，比如 <code>src/math/add.rs</code>：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn add(x: i32, y: i32) -&gt; i32 {
+    if super::DEBUG {
+        println!(&quot;add({}, {})&quot;, x, y);
+    }
+    x + y
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>意料之中，编译通过且成功运行：</p>
+<pre><code class="language-bash">$ cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.03s
+     Running `target/debug/modules`
+add(1, 2)
+1 + 2 = 3
+</code></pre>
+<p>注意：一个模块总是可以访问其父级作用域（通过 <code>super::</code>）- 即便是是父级作用域的私有变量、私有函数等。
+<code>DEBUG</code> 是私有的，但我们可以在 <code>add</code> 模块中使用它。</p>
+<p>如果我们要定义rust关键字和文件路径惯用语之间的对应关系，我们可以映射：</p>
+<ul>
+<li><code>crate::foo</code> 对 <code>/foo</code> - 如果我们认为“根文件系统”为包含 <code>main.rs</code> 或 <code>lib.rs</code> 的目录</li>
+<li><code>super::foo</code> 对 <code>../foo</code></li>
+<li><code>self::foo</code> 对 <code>./foo</code></li>
+</ul>
+<p>什么时候会需要使用 <code>self</code> 呢？</p>
+<p>好吧，对于 <code>src/math/mod.rs</code> 如下两行：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub use add::add;
+pub use sub::sub;
+<span class="boring">}
+</span></code></pre></pre>
+<p>我们可以用单行代码实现：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub use self::{add:add, sub::sub};
+<span class="boring">}
+</span></code></pre></pre>
+<p>假设子模块只导出了我们希望使用的符号，我们甚至可以使用通配符：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub use self::{add::*, sub::*};
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="同级模块"><a class="header" href="#同级模块">同级模块</a></h2>
+<p>好吧，同级模块（如 <code>add</code> 和 <code>sub</code>）之间没有直接访问的路径。</p>
+<p>如果想在 <code>add</code> 中重新定义 <code>sub</code>，我们在 <code>src/math/sub.rs</code> 不能这样做：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// 编译不通过
+pub fn sub(x: i32, y: i32) -&gt; i32 {
+    add::add(x, -y)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>add</code> 和 <code>sub</code> 共享父级模块，但不意味他们共享命名空间。</p>
+<p>我们也绝对不应该使用第二个 <code>mod</code>。 <code>add</code> 模块已存在于模块层次结构中的某个位置。
+除此之外 - 因为它是 <code>sub</code> 的子模块，它要么存在于 <code>src/math/sub/add.rs</code> 或 <code>src/math/sub/add/mod.rs</code>
+中 - 这两者都没有意义。</p>
+<p>如果我们想访问 <code>add</code>， 必须通过父级模块，就像其他人一样。在 <code>src/math/sub.rs</code> 中：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn sub(x: i32, y: i32) -&gt; i32 {
+    super::add::add(x, -y)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>或者使用 <code>src/math/mod.rs</code> 重新导出的 <code>add</code>：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn sub(x: i32, y: i32) -&gt; i32 {
+    super::add(x, -y)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>或者简单地导入 <code>add</code> 模块下的所有东西：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn sub(x: i32, y: i32) -&gt; i32 {
+    use super::add::*;
+    add(x, -y)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>请注意，函数有它自己的作用域，所以 <code>use</code> 不会影响这个模块其他地方。</p>
+<p>你甚至可以用 {} 限制作用域！</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub fn sub(x: i32, y: i32) -&gt; i32 {
+    let add = &quot;something else&quot;;
+    let res = {
+        // 在这个代码块中，`add` 是 `add` 模块导出的函数
+        use super::add::*;
+        add(x, -y)
+    };
+    // 现在我们离开代码块，`add` 又变为 &quot;something else&quot;
+    res
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="preclude-模式"><a class="header" href="#preclude-模式"><code>preclude</code> 模式</a></h2>
+<p>随着 crate 变得复杂，模块层次也更复杂。除了从 crate 入口导出所有东西，
+一些 crate 选择一下最常用的符号并在 <code>prelude</code> 中导出他们。</p>
+<p><a href="https://crates.io/crates/chrono">chrono</a> 就是一个好例子。</p>
+<p>查看它在 <a href="https://docs.rs">https://docs.rs</a> 上的文档，它的主入口导出如下东西：</p>
+<p><a href="https://postimg.cc/dhX7qX0k"><img src="https://i.postimg.cc/Ls4jVFKT/chrono-exports.png" alt="chrono-exports.png" /></a></p>
+<p>所以如果这样写：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use chrono::*;
+<span class="boring">}
+</span></code></pre></pre>
+<p>将会在作用域内导入 <code>serde</code>，这会遮盖 <code>serde</code> crate。</p>
+<p>这也是为什么 chrono 使用 <code>preclude</code> 模块，这个模块只导出如下内容：</p>
+<p><a href="https://postimg.cc/6Tw85CB0"><img src="https://i.postimg.cc/7PJ09Ncp/chrono-prelude-exports.png" alt="chrono-prelude-exports.png" /></a></p>
+<h2 id="结论"><a class="header" href="#结论">结论</a></h2>
+<p>我希望这些能澄清 rust 的模块和文件，如果有任何疑问，请在 <a href="https://twitter.com/fasterthanlime">Twitter</a>上告诉我。感谢阅读！</p>
+<hr />
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>具体配置参考 <a href="https://rustlang-cn.org/office/rust/cargo/">Cargo教程</a></p>
+</div>
+<hr />
+<p>Github 博客地址：<a href="https://privaterookie.github.io/2019-07-14-Rust%E6%A8%A1%E5%9D%97%E4%B8%8E%E6%96%87%E4%BB%B6/">Rust 模块与文件</a></p>
+<p>知乎专栏：<a href="https://zhuanlan.zhihu.com/p/73544030">夜雨秋灯录 - Rust模块与文件</a></p>
+<p>LearnKu 社区文章: <a href="https://learnku.com/articles/31161">Rust 模块与文件</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../posts/2019-07-10-我经常使用的Rust小crate.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../posts/2019-07-18-Deepin安装Angular10+.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../posts/2019-07-10-我经常使用的Rust小crate.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../posts/2019-07-18-Deepin安装Angular10+.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lunr.zh.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

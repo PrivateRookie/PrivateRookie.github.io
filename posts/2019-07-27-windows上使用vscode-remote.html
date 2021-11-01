@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>windows上使用vscode-remote - 夜雨秋灯录</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../导言.html">导言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../文章.html"><strong aria-hidden="true">1.</strong> 文章</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../posts/2018-06-24-openstack创建虚拟机源码阅读.html"><strong aria-hidden="true">1.1.</strong> openstack创建虚拟机源码阅读</a></li><li class="chapter-item "><a href="../posts/2018-06-27-Bottle-框架中装饰器类和描述符应用.html"><strong aria-hidden="true">1.2.</strong> Bottle-框架中装饰器类和描述符应用</a></li><li class="chapter-item "><a href="../posts/2019-04-17-使用devpi搭建本地源.html"><strong aria-hidden="true">1.3.</strong> 使用devpi搭建本地源</a></li><li class="chapter-item "><a href="../posts/2019-04-20-Python展开嵌套序列.html"><strong aria-hidden="true">1.4.</strong> Python展开嵌套序列</a></li><li class="chapter-item "><a href="../posts/2019-04-20-pipenv-使用简介.html"><strong aria-hidden="true">1.5.</strong> pipenv-使用简介</a></li><li class="chapter-item "><a href="../posts/2019-04-22-深度系统rust开发环境搭建.html"><strong aria-hidden="true">1.6.</strong> 深度系统rust开发环境搭建</a></li><li class="chapter-item "><a href="../posts/2019-05-01-miniserve-miniserve简单美观的文件服务器.html"><strong aria-hidden="true">1.7.</strong> miniserve-miniserve简单美观的文件服务器</a></li><li class="chapter-item "><a href="../posts/2019-05-05-magnum-stein-release-new-features.html"><strong aria-hidden="true">1.8.</strong> magnum-stein-release-new-features</a></li><li class="chapter-item "><a href="../posts/2019-05-12-rust-rc.html"><strong aria-hidden="true">1.9.</strong> rust-rc</a></li><li class="chapter-item "><a href="../posts/2019-05-20-Python-Rust-迭代器类比.html"><strong aria-hidden="true">1.10.</strong> Python-Rust-迭代器类比</a></li><li class="chapter-item "><a href="../posts/2019-06-28-搭建etcd服务发现服务.html"><strong aria-hidden="true">1.11.</strong> 搭建etcd服务发现服务</a></li><li class="chapter-item "><a href="../posts/2019-07-03-OpenStack允许root用户使用ssh-key登录.html"><strong aria-hidden="true">1.12.</strong> OpenStack允许root用户使用ssh-key登录</a></li><li class="chapter-item "><a href="../posts/2019-07-06-requirements.txt文件指定依赖.html"><strong aria-hidden="true">1.13.</strong> requirements.txt文件指定依赖</a></li><li class="chapter-item "><a href="../posts/2019-07-10-我经常使用的Rust小crate.html"><strong aria-hidden="true">1.14.</strong> 我经常使用的Rust小crate</a></li><li class="chapter-item "><a href="../posts/2019-07-14-Rust模块与文件.html"><strong aria-hidden="true">1.15.</strong> Rust模块与文件</a></li><li class="chapter-item "><a href="../posts/2019-07-18-Deepin安装Angular10+.html"><strong aria-hidden="true">1.16.</strong> Deepin安装Angular10+</a></li><li class="chapter-item "><a href="../posts/2019-07-25-使用OSProfiler.html"><strong aria-hidden="true">1.17.</strong> 使用OSProfiler</a></li><li class="chapter-item expanded "><a href="../posts/2019-07-27-windows上使用vscode-remote.html" class="active"><strong aria-hidden="true">1.18.</strong> windows上使用vscode-remote</a></li><li class="chapter-item "><a href="../posts/2019-08-04-使用rust-analyzer.html"><strong aria-hidden="true">1.19.</strong> 使用rust-analyzer</a></li><li class="chapter-item "><a href="../posts/2019-08-16-Python-package安装时安装额外文件.html"><strong aria-hidden="true">1.20.</strong> Python-package安装时安装额外文件</a></li><li class="chapter-item "><a href="../posts/2019-08-31-Rust-命令行工具.html"><strong aria-hidden="true">1.21.</strong> Rust-命令行工具</a></li><li class="chapter-item "><a href="../posts/2019-09-27-Fedora-CoreOS-尝鲜.html"><strong aria-hidden="true">1.22.</strong> Fedora-CoreOS-尝鲜</a></li><li class="chapter-item "><a href="../posts/2020-01-31-rust代码风格tips.html"><strong aria-hidden="true">1.23.</strong> rust代码风格tips</a></li><li class="chapter-item "><a href="../posts/2020-02-03-log4rs-Rust-log库.html"><strong aria-hidden="true">1.24.</strong> log4rs-Rust-log库</a></li><li class="chapter-item "><a href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html"><strong aria-hidden="true">1.25.</strong> impl-Trait-vs-dyn-Trait</a></li><li class="chapter-item "><a href="../posts/2020-03-04-nom-cheatsheet.html"><strong aria-hidden="true">1.26.</strong> nom-cheatsheet</a></li><li class="chapter-item "><a href="../posts/2020-03-09-gitlab-runner启动守护进程.html"><strong aria-hidden="true">1.27.</strong> gitlab-runner启动守护进程</a></li><li class="chapter-item "><a href="../posts/2020-03-21-使用nom写parser.html"><strong aria-hidden="true">1.28.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-05-10-使用nom写parser.html"><strong aria-hidden="true">1.29.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-07-使用nom写parser.html"><strong aria-hidden="true">1.30.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-25-Rust实现的日至收集工具.html"><strong aria-hidden="true">1.31.</strong> Rust实现的日至收集工具</a></li><li class="chapter-item "><a href="../posts/2020-07-19-typing+pyright-更正确的Python代码.html"><strong aria-hidden="true">1.32.</strong> typing+pyright-更正确的Python代码</a></li><li class="chapter-item "><a href="../posts/2020-07-31-boxercrab发布.html"><strong aria-hidden="true">1.33.</strong> boxercrab发布</a></li><li class="chapter-item "><a href="../posts/2020-08-16-使用nom写parser.html"><strong aria-hidden="true">1.34.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-08-30-PowerShell配置.html"><strong aria-hidden="true">1.35.</strong> PowerShell配置</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../笔记.html"><strong aria-hidden="true">2.</strong> 笔记</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../notes/rust/2021-10-31-嵌套解构.html"><strong aria-hidden="true">2.1.</strong> 嵌套解构</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">夜雨秋灯录</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="winddows-上使用vscode-remote-插件进行远程开发"><a class="header" href="#winddows-上使用vscode-remote-插件进行远程开发">Winddows 上使用VSCode Remote 插件进行远程开发</a></h1>
+<hr />
+<p>直到 VSCode remote-ssh 插件出来和我买了一台 NUC 机器之前，我一直在维护两套开发环境，
+一套防在公司的 CentOS 虚拟机上，另一套则是家里的 Windows 机器。因为代码同步以及 Windows
+和 Linux 系统差异等问题，维护两套环境非常麻烦。但是现在通过 <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">VSCode remote-ssh</a> +
+VPN 的方式就可以在 Windows 上使用 NUC 机器进行开发。</p>
+<h2 id="配置远程机器"><a class="header" href="#配置远程机器">配置远程机器</a></h2>
+<p>这个方案也适用于虚拟机作为远程机器，只要它能够通过 SSH 远程访问即可。这里我使用 mosh 作为
+openssh 替代方案，因为我在 windows 上使用的 <a href="https://github.com/felixse/FluentTerminal">FluentTerminal</a>
+对 mosh 有更好的支持。这是我在 Windows 上最满意的终端，颜值不错，速度比 Hyper 要快，而且支持
+iterm 颜色方案导入</p>
+<p><a href="https://postimg.cc/7bdXJLSH"><img src="https://i.postimg.cc/4NN0M7d9/fluent-terminal.png" alt="fluent-terminal.png" /></a></p>
+<p>远程机器上可以通过下面的方式安装 mosh-server</p>
+<pre><code class="language-bash"># CentOS
+# 需要安装 epel-release
+sudo yum -y install epel-release
+sudo yum update
+sudo yum -y install mosh
+
+# Ubuntu 或 deepin
+sudo apt -y install mosh
+
+# 启动 mosh-server
+mosh-server
+</code></pre>
+<p>在远程机器上我习惯用 oh-my-zsh，可是远程连接上去的时候 <code>PATH</code> 环境变量与直接登录时有差异
+导致远程连接时 <code>cargo</code> <code>procs</code> 等命令无法使用。简单粗暴的解决办法时将直接登录时的 <code>PATH</code>
+写入 <code>~/.zshrc</code> 文件</p>
+<pre><code class="language-bash"># ~/.zshrc
+PATH=$PATH:/home/rookie/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/rookie/bin:/bin
+</code></pre>
+<h2 id="配置本地机器"><a class="header" href="#配置本地机器">配置本地机器</a></h2>
+<p>建议在将本地机器上的 <code>id_rsa.pub</code> 文件内容复制到 <code>~/.ssh/authorized_keys</code> 中，这样可以
+避免每次连接时都需要输入密码。</p>
+<p>接着配置 ssh config 文件示例配置如下</p>
+<pre><code class="language-conf"># ~/.ssh/config
+Host NUC
+    HostName 172.16.130.38
+    User rookie
+    IdentityFile ~/.ssh/id_rsa
+</code></pre>
+<p>接着在本地的 VSCode 下载 vscode-remote 插件，虽然还处于 preview 阶段，但正式版 VSCode
+现在也可以直接安装了。</p>
+<p><a href="https://postimg.cc/t1K8zzxT"><img src="https://i.postimg.cc/mDkRBXZQ/remote.png" alt="remote.png" /></a></p>
+<p>安装完成后应该会在左下角有个连接图标</p>
+<p><a href="https://postimg.cc/SjgFBc0Z"><img src="https://i.postimg.cc/Nfcsrxdw/image.png" alt="image.png" /></a></p>
+<p>点击然后选择 remote-SSH: Connection to remote host，然后在 Host 列表选择之前配置好的
+NUC，等待连接完成。</p>
+<p>连接完成后 VSCode 会打开一个新窗口，窗口左下角的远程连接图标显示当前窗口已连接到 NUC</p>
+<p><a href="https://postimg.cc/9z8K8VTK"><img src="https://i.postimg.cc/gkmp020z/NUC.png" alt="NUC.png" /></a></p>
+<p>选择打开文件打开远程机器上的一个文件夹即可开始在远端机器编辑代码</p>
+<p><a href="https://postimg.cc/67Xm2QJ2"><img src="https://i.postimg.cc/3w45qytB/image.png" alt="image.png" /></a></p>
+<p>值得一提的是在这个窗口打开的命令行也是在远程机器上的，不需要打开后再手动登录  :+1: 。</p>
+<p>不过需要注意的是远程的 VSCode 不会同步本地插件，需要再次安装，安装后的插件右下角也会带远程连接
+的图标</p>
+<p><a href="https://postimg.cc/HcL3XcSx"><img src="https://i.postimg.cc/j5H9VyPz/image.png" alt="image.png" /></a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../posts/2019-07-25-使用OSProfiler.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../posts/2019-08-04-使用rust-analyzer.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../posts/2019-07-25-使用OSProfiler.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../posts/2019-08-04-使用rust-analyzer.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lunr.zh.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

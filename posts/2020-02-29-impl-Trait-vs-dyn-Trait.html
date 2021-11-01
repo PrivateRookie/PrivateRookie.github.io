@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>impl-Trait-vs-dyn-Trait - 夜雨秋灯录</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../导言.html">导言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../文章.html"><strong aria-hidden="true">1.</strong> 文章</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../posts/2018-06-24-openstack创建虚拟机源码阅读.html"><strong aria-hidden="true">1.1.</strong> openstack创建虚拟机源码阅读</a></li><li class="chapter-item "><a href="../posts/2018-06-27-Bottle-框架中装饰器类和描述符应用.html"><strong aria-hidden="true">1.2.</strong> Bottle-框架中装饰器类和描述符应用</a></li><li class="chapter-item "><a href="../posts/2019-04-17-使用devpi搭建本地源.html"><strong aria-hidden="true">1.3.</strong> 使用devpi搭建本地源</a></li><li class="chapter-item "><a href="../posts/2019-04-20-Python展开嵌套序列.html"><strong aria-hidden="true">1.4.</strong> Python展开嵌套序列</a></li><li class="chapter-item "><a href="../posts/2019-04-20-pipenv-使用简介.html"><strong aria-hidden="true">1.5.</strong> pipenv-使用简介</a></li><li class="chapter-item "><a href="../posts/2019-04-22-深度系统rust开发环境搭建.html"><strong aria-hidden="true">1.6.</strong> 深度系统rust开发环境搭建</a></li><li class="chapter-item "><a href="../posts/2019-05-01-miniserve-miniserve简单美观的文件服务器.html"><strong aria-hidden="true">1.7.</strong> miniserve-miniserve简单美观的文件服务器</a></li><li class="chapter-item "><a href="../posts/2019-05-05-magnum-stein-release-new-features.html"><strong aria-hidden="true">1.8.</strong> magnum-stein-release-new-features</a></li><li class="chapter-item "><a href="../posts/2019-05-12-rust-rc.html"><strong aria-hidden="true">1.9.</strong> rust-rc</a></li><li class="chapter-item "><a href="../posts/2019-05-20-Python-Rust-迭代器类比.html"><strong aria-hidden="true">1.10.</strong> Python-Rust-迭代器类比</a></li><li class="chapter-item "><a href="../posts/2019-06-28-搭建etcd服务发现服务.html"><strong aria-hidden="true">1.11.</strong> 搭建etcd服务发现服务</a></li><li class="chapter-item "><a href="../posts/2019-07-03-OpenStack允许root用户使用ssh-key登录.html"><strong aria-hidden="true">1.12.</strong> OpenStack允许root用户使用ssh-key登录</a></li><li class="chapter-item "><a href="../posts/2019-07-06-requirements.txt文件指定依赖.html"><strong aria-hidden="true">1.13.</strong> requirements.txt文件指定依赖</a></li><li class="chapter-item "><a href="../posts/2019-07-10-我经常使用的Rust小crate.html"><strong aria-hidden="true">1.14.</strong> 我经常使用的Rust小crate</a></li><li class="chapter-item "><a href="../posts/2019-07-14-Rust模块与文件.html"><strong aria-hidden="true">1.15.</strong> Rust模块与文件</a></li><li class="chapter-item "><a href="../posts/2019-07-18-Deepin安装Angular10+.html"><strong aria-hidden="true">1.16.</strong> Deepin安装Angular10+</a></li><li class="chapter-item "><a href="../posts/2019-07-25-使用OSProfiler.html"><strong aria-hidden="true">1.17.</strong> 使用OSProfiler</a></li><li class="chapter-item "><a href="../posts/2019-07-27-windows上使用vscode-remote.html"><strong aria-hidden="true">1.18.</strong> windows上使用vscode-remote</a></li><li class="chapter-item "><a href="../posts/2019-08-04-使用rust-analyzer.html"><strong aria-hidden="true">1.19.</strong> 使用rust-analyzer</a></li><li class="chapter-item "><a href="../posts/2019-08-16-Python-package安装时安装额外文件.html"><strong aria-hidden="true">1.20.</strong> Python-package安装时安装额外文件</a></li><li class="chapter-item "><a href="../posts/2019-08-31-Rust-命令行工具.html"><strong aria-hidden="true">1.21.</strong> Rust-命令行工具</a></li><li class="chapter-item "><a href="../posts/2019-09-27-Fedora-CoreOS-尝鲜.html"><strong aria-hidden="true">1.22.</strong> Fedora-CoreOS-尝鲜</a></li><li class="chapter-item "><a href="../posts/2020-01-31-rust代码风格tips.html"><strong aria-hidden="true">1.23.</strong> rust代码风格tips</a></li><li class="chapter-item "><a href="../posts/2020-02-03-log4rs-Rust-log库.html"><strong aria-hidden="true">1.24.</strong> log4rs-Rust-log库</a></li><li class="chapter-item expanded "><a href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html" class="active"><strong aria-hidden="true">1.25.</strong> impl-Trait-vs-dyn-Trait</a></li><li class="chapter-item "><a href="../posts/2020-03-04-nom-cheatsheet.html"><strong aria-hidden="true">1.26.</strong> nom-cheatsheet</a></li><li class="chapter-item "><a href="../posts/2020-03-09-gitlab-runner启动守护进程.html"><strong aria-hidden="true">1.27.</strong> gitlab-runner启动守护进程</a></li><li class="chapter-item "><a href="../posts/2020-03-21-使用nom写parser.html"><strong aria-hidden="true">1.28.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-05-10-使用nom写parser.html"><strong aria-hidden="true">1.29.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-07-使用nom写parser.html"><strong aria-hidden="true">1.30.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-25-Rust实现的日至收集工具.html"><strong aria-hidden="true">1.31.</strong> Rust实现的日至收集工具</a></li><li class="chapter-item "><a href="../posts/2020-07-19-typing+pyright-更正确的Python代码.html"><strong aria-hidden="true">1.32.</strong> typing+pyright-更正确的Python代码</a></li><li class="chapter-item "><a href="../posts/2020-07-31-boxercrab发布.html"><strong aria-hidden="true">1.33.</strong> boxercrab发布</a></li><li class="chapter-item "><a href="../posts/2020-08-16-使用nom写parser.html"><strong aria-hidden="true">1.34.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-08-30-PowerShell配置.html"><strong aria-hidden="true">1.35.</strong> PowerShell配置</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../笔记.html"><strong aria-hidden="true">2.</strong> 笔记</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../notes/rust/2021-10-31-嵌套解构.html"><strong aria-hidden="true">2.1.</strong> 嵌套解构</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">夜雨秋灯录</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="捋捋-rust-中的-impl-trait-和-dyn-trait"><a class="header" href="#捋捋-rust-中的-impl-trait-和-dyn-trait">捋捋 Rust 中的 impl Trait 和 dyn Trait</a></h1>
+<hr />
+<h2 id="缘起"><a class="header" href="#缘起">缘起</a></h2>
+<p>一切都要从年末换工作碰上疫情, 在家闲着无聊又读了几首诗, 突然想写一个可以浏览和背诵诗词的 TUI 程序说起.
+我选择了 <a href="https://github.com/gyscos/cursive">Cursive</a> 这个 Rust TUI 库. 在实现时有这么一个函数, 它会根据参数的不同返回某个组件(如 Button, TextView 等).
+在 <code>Cursive</code> 中, 每个组件都实现了 <code>View</code> 这个 trait, 最初这个函数只会返回某个确定的组件, 所以函数签名可以这样写</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn some_fn(param: SomeType) -&gt; Button
+<span class="boring">}
+</span></code></pre></pre>
+<p>随着开发进度增加, 这个函数需要返回 Button, TextView 等组件中的一个, 我下意识地写出了类似于下面的代码</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn some_fn(param1: i32, param2: i32) -&gt; impl View {
+    if param1 &gt; param2 {
+        // do something...
+        return Button {};
+    } else {
+        // do something...
+        return TextView {};
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>可惜 Rust 编译器一如既往地打脸, Rust 编译器报错如下</p>
+<pre><code class="language-bash">  --&gt; src\main.rs:19:16
+   |
+13 | fn some_fn(param1: i32, param2: i32) -&gt; impl View {
+   |                                         --------- expected because this return type...
+...
+16 |         return Button {};
+   |                --------- ...is found to be `Button` here
+...
+19 |         return TextView {};
+   |                ^^^^^^^^^^^ expected struct `Button`, found struct `TextView`
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+</code></pre>
+<p>从编译器报错信息看函数返回值虽然是 <code>impl View</code> 但其从 <code>if</code> 分支推断返回值类型为 <code>Button</code> 就不再接受 <code>else</code> 分支返回的 <code>TextView</code>. 这与 Rust 要求 <code>if else</code> 两个分支的返回值类型相同的特性一致.
+那能不能让函数返回多种类型呢? Rust 之所以要求函数不能返回多种类型是因为 Rust 在需要在
+编译期确定返回值占用的内存大小, 显然不同类型的返回值其内存大小不一定相同.
+既然如此, 把返回值装箱, 返回一个胖指针, 这样我们的返回值大小可以确定了, 这样也许就可以了吧.
+尝试把函数修改成如下形式:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn some_fn(param1: i32, param2: i32) -&gt; Box&lt;View&gt; {
+    if param1 &gt; param2 {
+        // do something...
+        return Box::new(Button {});
+    } else {
+        // do something...
+        return Box::new(TextView {});
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>现在代码通过编译了, 但如果使用 Rust 2018, 你会发现编译器会抛出警告:</p>
+<pre><code class="language-bash">warning: trait objects without an explicit `dyn` are deprecated
+  --&gt; src\main.rs:13:45
+   |
+13 | fn some_fn(param1: i32, param2: i32) -&gt; Box&lt;View&gt; {
+   |                                             ^^^^ help: use `dyn`: `dyn View`
+   |
+   = note: `#[warn(bare_trait_objects)]` on by default
+</code></pre>
+<p>编译器告诉我们使用 trait object 时不使用 <code>dyn</code> 的形式已经被废弃了, 并且还
+贴心的提示我们把 <code>Box&lt;View&gt;</code> 改成 <code>Box&lt;dyn View&gt;</code>, 按编译器的提示修改代码, 此时代码
+no warning, no error, 完美.</p>
+<p>但 <code>impl Trait</code> 和 <code>Box&lt;dyn Trait&gt;</code> 除了允许多种返回值类型的之外还有什么区别吗? <code>trait object</code> 又是什么? 为什么 <code>Box&lt;Trait&gt;</code> 形式的返回值会被废弃而引入了新的 <code>dyn</code> 关键字呢?</p>
+<h2 id="埋坑"><a class="header" href="#埋坑">埋坑</a></h2>
+<p><code>impl Trait</code> 和 <code>dyn Trait</code> 在 Rust 分别被称为静态分发和动态分发. 在第一版的 Rust Book 这样解释分发(dispatch)</p>
+<blockquote>
+<p>When code involves polymorphism, there needs to be a mechanism to determine which specific version is actually run. This is called ‘dispatch’. There are two major forms of dispatch: static dispatch and dynamic dispatch. While Rust favors static dispatch, it also supports dynamic dispatch through a mechanism called ‘trait objects’.</p>
+</blockquote>
+<p>即当代码涉及多态时, 需要某种机制决定实际调用类型. Rust 的 Trait 可以看作某些具有通过特性类型的集合, 以上面代码为例, 在写代码时我们不关心具体类型, 但在编译或运行时必须确定 <code>Button</code> 还是 <code>TextView</code>.
+静态分发, 正如静态类型语言的&quot;静态&quot;一词说明的, 在编译期就确定了具体调用类型. Rust 编译器会通过单态化(Monomorphization) 将泛型函数展开.</p>
+<p>假设 <code>Foo</code> 和 <code>Bar</code> 都实现了 <code>Noop</code> 特性, Rust 会把函数</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn x(...) -&gt; impl Noop
+<span class="boring">}
+</span></code></pre></pre>
+<p>展开为</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn x_for_foo(...) -&gt; Foo
+fn x_for_bar(...) -&gt; Bar
+<span class="boring">}
+</span></code></pre></pre>
+<p>(仅作原理说明, 不保证编译会这样展开函数名).</p>
+<p>通过单态化, 编译器消除了泛型, 而且没有性能损耗, 这也是 Rust 提倡的形式, 缺点是过多展开可能会导致编译生成的二级制文件体积过大, 这时候可能需要重构代码.</p>
+<p>静态分发虽然有很高的性能, 但在文章开头其另一个缺点也有所体现, 那就是无法让函数返回多种类型, 因此 Rust 也支持通过 trait object 实现动态分发. 既然 Trait 是具有某种特性的类型的集合, 那我们可以把 Trait 也看作某种类型, 但它是&quot;抽象的&quot;, 就像OOP中的抽象类或基类, 不能直接实例化.</p>
+<p>Rust 的 trait object 使用了与 c++ 类似的 <code>vtable</code> 实现, trait object 含有1个指向实际类型的 <code>data</code> 指针, 和一个指向实际类型实现 trait 函数的 vtable, 以此实现动态分发. 更加详细的介绍可以在 <a href="https://alschwalm.com/blog/static/2017/03/07/exploring-dynamic-dispatch-in-rust/">Exploring Dynamic Dispatch in Rust</a>看到.
+既然 trait object 在实现时可以确定大小, 那为什么不用 <code>fn x() -&gt; Trait</code> 的形式呢? 虽然 trait object 在实现上可以确定大小, 但在逻辑上, 因为 Trait 代表类型的集合, 其大小无法确定. 允许 <code>fn x() -&gt; Trait</code> 会导致语义上的不和谐.
+那 <code>fn x() -&gt; &amp;Trait</code> 呢? 当然可以! 但鉴于这种场景下都是在函数中创建然后返回该值的引用, 显然需要加上生命周期:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn some_fn(param1: i32, param2: i32) -&gt; &amp;'static View {
+    if param1 &gt; param2 {
+        // do something...
+        return &amp;Button {};
+    } else {
+        // do something...
+        return &amp;TextView {};
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>我不喜欢添加额外的生命周期说明, 想必各位也一样. 所以我们可以用拥有所有权的 <code>Box</code> 智能指针避免烦人的生命周期说明. 至此 <code>Box&lt;Trait&gt;</code> 终于出现了.
+那么问题来了, 为什么编译器会提示 <code>Box&lt;Trait&gt;</code> 会被废弃, 特地引入了 <code>dyn</code> 关键字呢?
+答案可以在 <a href="https://github.com/rust-lang/rfcs/blob/master/text/2113-dyn-trait-syntax.md">RFC-2113</a> 中找到.</p>
+<p>RFC-2113 明确说明了引入 <code>dyn</code> 的原因, 即语义模糊, 令人困惑, 原因在于没有 <code>dyn</code> 让 Trait 和 trait objects 看起来完全一样, RFC 列举了３个例子说明.</p>
+<p>第一个例子, 加入你看到下面的代码, 你直到作者要干什么吗?</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>impl SomeTrait for AnotherTrait impl&lt;T&gt; SomeTrait for T where T: Another
+<span class="boring">}
+</span></code></pre></pre>
+<p>你看懂了吗? 说实话我也看不懂 : ) PASS</p>
+<p>第二个例子, <code>impl MyTrait {}</code> 是正确的语法, 不过这样会让人以为这会在 Trait 上添加默认实现, 扩展方法或其他 Trait 自身的一些操作.
+实际上这是在 trait object 上添加方法.</p>
+<p>如在下面代码说明的, Trait 默认实现的正确定义方法是在定义 Trait 时指定, 而不应该在 <code>impl Trait {}</code> 语句块中.</p>
+<pre><pre class="playground"><code class="language-rust">trait Foo {
+    fn default_impl(&amp;self) {
+        println!(&quot;correct impl!&quot;);
+    }
+}
+
+impl Foo {
+    fn trait_object() {
+        println!(&quot;trait object impl&quot;);
+    }
+}
+
+struct Bar {}
+
+impl Foo for Bar {}
+
+fn main() {
+    let b = Bar{};
+    b.default_impl();
+    // b.trait_object();
+    Foo::trait_object();
+}
+</code></pre></pre>
+<p><code>Bar</code> 在实现了 <code>Foo</code> 后可以通过 <code>b.default_impl</code> 调用, 无需额外实现, 但 <code>b.trait_object</code> 则不行, 因为 <code>trait_object</code> 方法是 <code>Foo</code> 的
+trait object 上的方法.</p>
+<p>如果是 Rust 2018 编译器应该还会显示一条警告, 告诉我们应该使用 <code>impl dyn Foo {}</code></p>
+<p>第三个例子则以函数类型和函数 trait 作对比, 两者差别只在于首字母是否大写(Fn代表函数trait object, fn则是函数类型), 难免会把两者弄混.</p>
+<p>更加详细的说明可以移步 <a href="https://github.com/rust-lang/rfcs/blob/master/text/2113-dyn-trait-syntax.md">RFC-2113</a>.</p>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p><code>impl trait</code> 和 <code>dyn trait</code> 区别在于静态分发于动态分发, 静态分发性能
+好, 但大量使用有可能造成二进制文件膨胀; 动态分发以 trait object 的概念通过虚表实现, 会带来一些运行时开销. 又因 trait object 与 Trait 在不引入 <code>dyn</code> 的情况下经常导致语义混淆, 所以 Rust 特地引入 <code>dyn</code> 关键字, 在 Rust 2018 中已经稳定.</p>
+<h2 id="引用"><a class="header" href="#引用">引用</a></h2>
+<p>以下是本文参考的资料</p>
+<ul>
+<li><a href="https://doc.rust-lang.org/nightly/edition-guide/rust-2018/trait-system/impl-trait-for-returning-complex-types-with-ease.html#argument-position">Rust Edition Guide</a></li>
+<li><a href="https://github.com/rust-lang/rust/issues/34511">impl trait 社区跟踪</a></li>
+<li><a href="https://github.com/rust-lang/rfcs/blob/master/text/2113-dyn-trait-syntax.md">RFC-2113</a></li>
+<li><a href="https://joshleeb.com/posts/rust-traits-and-trait-objects/">Trait and Trait Object</a></li>
+<li><a href="https://lukasatkinson.de/2016/dynamic-vs-static-dispatch/">Dynamic vs Static Dispatch</a></li>
+<li><a href="https://alschwalm.com/blog/static/2017/03/07/exploring-dynamic-dispatch-in-rust/">Exploring Dynamic Dispatch in Rust</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../posts/2020-02-03-log4rs-Rust-log库.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../posts/2020-03-04-nom-cheatsheet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../posts/2020-02-03-log4rs-Rust-log库.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../posts/2020-03-04-nom-cheatsheet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lunr.zh.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>使用nom写parser - 夜雨秋灯录</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../导言.html">导言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../文章.html"><strong aria-hidden="true">1.</strong> 文章</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../posts/2018-06-24-openstack创建虚拟机源码阅读.html"><strong aria-hidden="true">1.1.</strong> openstack创建虚拟机源码阅读</a></li><li class="chapter-item "><a href="../posts/2018-06-27-Bottle-框架中装饰器类和描述符应用.html"><strong aria-hidden="true">1.2.</strong> Bottle-框架中装饰器类和描述符应用</a></li><li class="chapter-item "><a href="../posts/2019-04-17-使用devpi搭建本地源.html"><strong aria-hidden="true">1.3.</strong> 使用devpi搭建本地源</a></li><li class="chapter-item "><a href="../posts/2019-04-20-Python展开嵌套序列.html"><strong aria-hidden="true">1.4.</strong> Python展开嵌套序列</a></li><li class="chapter-item "><a href="../posts/2019-04-20-pipenv-使用简介.html"><strong aria-hidden="true">1.5.</strong> pipenv-使用简介</a></li><li class="chapter-item "><a href="../posts/2019-04-22-深度系统rust开发环境搭建.html"><strong aria-hidden="true">1.6.</strong> 深度系统rust开发环境搭建</a></li><li class="chapter-item "><a href="../posts/2019-05-01-miniserve-miniserve简单美观的文件服务器.html"><strong aria-hidden="true">1.7.</strong> miniserve-miniserve简单美观的文件服务器</a></li><li class="chapter-item "><a href="../posts/2019-05-05-magnum-stein-release-new-features.html"><strong aria-hidden="true">1.8.</strong> magnum-stein-release-new-features</a></li><li class="chapter-item "><a href="../posts/2019-05-12-rust-rc.html"><strong aria-hidden="true">1.9.</strong> rust-rc</a></li><li class="chapter-item "><a href="../posts/2019-05-20-Python-Rust-迭代器类比.html"><strong aria-hidden="true">1.10.</strong> Python-Rust-迭代器类比</a></li><li class="chapter-item "><a href="../posts/2019-06-28-搭建etcd服务发现服务.html"><strong aria-hidden="true">1.11.</strong> 搭建etcd服务发现服务</a></li><li class="chapter-item "><a href="../posts/2019-07-03-OpenStack允许root用户使用ssh-key登录.html"><strong aria-hidden="true">1.12.</strong> OpenStack允许root用户使用ssh-key登录</a></li><li class="chapter-item "><a href="../posts/2019-07-06-requirements.txt文件指定依赖.html"><strong aria-hidden="true">1.13.</strong> requirements.txt文件指定依赖</a></li><li class="chapter-item "><a href="../posts/2019-07-10-我经常使用的Rust小crate.html"><strong aria-hidden="true">1.14.</strong> 我经常使用的Rust小crate</a></li><li class="chapter-item "><a href="../posts/2019-07-14-Rust模块与文件.html"><strong aria-hidden="true">1.15.</strong> Rust模块与文件</a></li><li class="chapter-item "><a href="../posts/2019-07-18-Deepin安装Angular10+.html"><strong aria-hidden="true">1.16.</strong> Deepin安装Angular10+</a></li><li class="chapter-item "><a href="../posts/2019-07-25-使用OSProfiler.html"><strong aria-hidden="true">1.17.</strong> 使用OSProfiler</a></li><li class="chapter-item "><a href="../posts/2019-07-27-windows上使用vscode-remote.html"><strong aria-hidden="true">1.18.</strong> windows上使用vscode-remote</a></li><li class="chapter-item "><a href="../posts/2019-08-04-使用rust-analyzer.html"><strong aria-hidden="true">1.19.</strong> 使用rust-analyzer</a></li><li class="chapter-item "><a href="../posts/2019-08-16-Python-package安装时安装额外文件.html"><strong aria-hidden="true">1.20.</strong> Python-package安装时安装额外文件</a></li><li class="chapter-item "><a href="../posts/2019-08-31-Rust-命令行工具.html"><strong aria-hidden="true">1.21.</strong> Rust-命令行工具</a></li><li class="chapter-item "><a href="../posts/2019-09-27-Fedora-CoreOS-尝鲜.html"><strong aria-hidden="true">1.22.</strong> Fedora-CoreOS-尝鲜</a></li><li class="chapter-item "><a href="../posts/2020-01-31-rust代码风格tips.html"><strong aria-hidden="true">1.23.</strong> rust代码风格tips</a></li><li class="chapter-item "><a href="../posts/2020-02-03-log4rs-Rust-log库.html"><strong aria-hidden="true">1.24.</strong> log4rs-Rust-log库</a></li><li class="chapter-item "><a href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html"><strong aria-hidden="true">1.25.</strong> impl-Trait-vs-dyn-Trait</a></li><li class="chapter-item "><a href="../posts/2020-03-04-nom-cheatsheet.html"><strong aria-hidden="true">1.26.</strong> nom-cheatsheet</a></li><li class="chapter-item "><a href="../posts/2020-03-09-gitlab-runner启动守护进程.html"><strong aria-hidden="true">1.27.</strong> gitlab-runner启动守护进程</a></li><li class="chapter-item expanded "><a href="../posts/2020-03-21-使用nom写parser.html" class="active"><strong aria-hidden="true">1.28.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-05-10-使用nom写parser.html"><strong aria-hidden="true">1.29.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-07-使用nom写parser.html"><strong aria-hidden="true">1.30.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-25-Rust实现的日至收集工具.html"><strong aria-hidden="true">1.31.</strong> Rust实现的日至收集工具</a></li><li class="chapter-item "><a href="../posts/2020-07-19-typing+pyright-更正确的Python代码.html"><strong aria-hidden="true">1.32.</strong> typing+pyright-更正确的Python代码</a></li><li class="chapter-item "><a href="../posts/2020-07-31-boxercrab发布.html"><strong aria-hidden="true">1.33.</strong> boxercrab发布</a></li><li class="chapter-item "><a href="../posts/2020-08-16-使用nom写parser.html"><strong aria-hidden="true">1.34.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-08-30-PowerShell配置.html"><strong aria-hidden="true">1.35.</strong> PowerShell配置</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../笔记.html"><strong aria-hidden="true">2.</strong> 笔记</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../notes/rust/2021-10-31-嵌套解构.html"><strong aria-hidden="true">2.1.</strong> 嵌套解构</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">夜雨秋灯录</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="使用-rust-写-parser1-初识-nom"><a class="header" href="#使用-rust-写-parser1-初识-nom">【使用 Rust 写 Parser】1. 初识 nom</a></h1>
+<p>关于 nom 计划写一个系列, 大概有3篇或更多专栏文章(如果我不是太忙或不鸽的话), 从基本概念开始, 到中等难度的 json 解析器, 最后可能会用 nom 5.0 实现简单语言的解析器.</p>
+<hr />
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>最近在读书练习用 Rust 写算术表达式解析器被正则表达式弄烦了, 不由得想起那句金句</p>
+<blockquote>
+<p>Some people, when confronted with a problem, think “I know, I’ll use regular expressions.” Now they have two problems.
+By Jamie Zawinski</p>
+</blockquote>
+<p>虽然最后用正则表达式实现原有需求, 甚至想写篇专栏记录下, 但一个星期后再看代码, 好像比当初写的时候还要晦涩, 算了, Let it Go 吧 : )</p>
+<p>经过每天25小时的高强度网上冲浪, 我找到一个在写解析器时比正则表达式要更方便的 crate:
+<a href="https://github.com/Geal/nom">nom</a></p>
+<p>nom, 发音类似大口咀嚼时发出的声音, 比喻这个 crate 会一口一口吞掉你的数据.</p>
+<h2 id="quick-start"><a class="header" href="#quick-start">quick start</a></h2>
+<p>以 nom README 上16进制颜色值解析器为例, 简要说明下 nom 的一些概念和常见函数</p>
+<pre><pre class="playground"><code class="language-rust">use nom::{
+  IResult,
+  bytes::complete::{tag, take_while_m_n},
+  combinator::map_res,
+  sequence::tuple
+};
+
+#[derive(Debug,PartialEq)]
+pub struct Color {
+  pub red:   u8,
+  pub green: u8,
+  pub blue:  u8,
+}
+
+fn from_hex(input: &amp;str) -&gt; Result&lt;u8, std::num::ParseIntError&gt; {
+  u8::from_str_radix(input, 16)
+}
+
+fn is_hex_digit(c: char) -&gt; bool {
+  c.is_digit(16)
+}
+
+fn hex_primary(input: &amp;str) -&gt; IResult&lt;&amp;str, u8&gt; {
+  map_res(
+    take_while_m_n(2, 2, is_hex_digit),
+    from_hex
+  )(input)
+}
+
+fn hex_color(input: &amp;str) -&gt; IResult&lt;&amp;str, Color&gt; {
+  let (input, _) = tag(&quot;#&quot;)(input)?;
+  let (input, (red, green, blue)) = tuple((hex_primary, hex_primary, hex_primary))(input)?;
+
+  Ok((input, Color { red, green, blue }))
+}
+
+fn main() {}
+
+#[test]
+fn parse_color() {
+  assert_eq!(hex_color(&quot;#2F14DF&quot;), Ok((&quot;&quot;, Color {
+    red: 47,
+    green: 20,
+    blue: 223,
+  })));
+}
+</code></pre></pre>
+<p>对于一个16进制颜色值, 其以 &quot;#&quot; 开头, 接着6个16进制数(0-9和a-f,大小写不敏感), 每2个值构成一组, 从左到右为 RGB 通道值, 可以简写为 <code>#R(hex, hex)G(hex, hex)B(hex, hex)</code>.</p>
+<p>因此, 解析器逻辑可以概括为, 去掉开头的 &quot;#&quot;, 如果随后的6个字符为16进制数, 则分为三组, 并将每组的值从16进制转换为10进制.</p>
+<p>匹配某个模式这个需求在解析过程中普遍存在, nom 提供了 <code>tag</code>, <code>tag</code> 会匹配(只匹配开头)你给出的字符模式, 并返回匹配的模式和余下字符, 如果不匹配, 则返回错误.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let (input, _) = tag(&quot;#&quot;)(input)?;
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>tag(&quot;#&quot;)</code> 返回的是一个函数, 所以我们可以用待解析的字符作为参数, 调用 <code>tag(&quot;#&quot;)</code> 的返回值, 函数返回值为 <code>IResult&lt;Input, Input, Error&gt;</code>, 其中 <code>Input</code> 为函数输入参数类型, 返回值第一个值为去掉匹配模式后的输入值(这里为字符串切片), 第二个值为 pattern, 第三为错误值.</p>
+<p><code>IResult</code> 实现了 <code>Error</code> trait, 因此可以用 <code>?</code> 快速失败, 其相当于 <code>std::result::Result&lt;Ok(remaining, pattern), Err&gt;</code>, 在 nom 中绝大多数解析函数返回值都是这种形式.</p>
+<pre><pre class="playground"><code class="language-rust">use nom::{IResult, bytes::complete::tag};
+
+fn parse(input: &amp;str) -&gt; IResult&lt;&amp;str, &amp;str&gt; {
+    tag(&quot;#&quot;)(input)
+}
+fn main() {
+    let (remain, pattern) = parse(&quot;#ffffff&quot;).unwrap();
+    println!(&quot;{}, {}&quot;,remain, pattern);
+}
+</code></pre></pre>
+<p>输出 <code>ffffff, #</code>.</p>
+<p>接着要对剩下字符做解析, 拿出两个字符, 判断这字符是否是16进制数, 如果是, 则将其转换为10进制, Rust 有 <code>take_while</code>, nom 提供了扩展性更好的 <code>take_while_m_n</code>, m, n 分为
+最少和最多匹配数</p>
+<p>因此函数可以这样调用 <code>take_while_m_n(2, 2, |c: &amp;char| c.is_digit(16))</code>, 在 Rust 中可以对 <code>Result</code> 使用 <code>map</code>, nom 也有类似函数 <code>map_res</code>, 按下面的方式调用</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>map_res(
+    take_while_m_n(2, 2, |c: &amp;char| c.is_digit(16)),
+    to_decimal
+)(input)
+<span class="boring">}
+</span></code></pre></pre>
+<p>会先对 <code>input</code> 应用 <code>take_while_m_n(2, 2, |c: &amp;char| c.is_digit(16))</code>, 如果 Ok 则对结果应用 <code>to_decimal</code> 转换为10进制</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn from_hex(input: &amp;str) -&gt; Result&lt;u8, std::num::ParseIntError&gt; {
+  u8::from_str_radix(input, 16)
+}
+
+fn is_hex_digit(c: char) -&gt; bool {
+  c.is_digit(16)
+}
+
+fn hex_primary(input: &amp;str) -&gt; IResult&lt;&amp;str, u8&gt; {
+  map_res(
+    take_while_m_n(2, 2, is_hex_digit),
+    from_hex
+  )(input)
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>现在要对输入应用三次 <code>hex_primary</code>, 用 for 循环? 不 nom 有更趁手的工具 <code>tuple</code>, <code>tuple</code> 接受一组组合子, 将组合子按顺序应用到输入上, 然后按顺序返回以元组返回解析结果</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>tuple((hex_primary, hex_primary, hex_primary))(input)?
+<span class="boring">}
+</span></code></pre></pre>
+<p>把上面的函数组合组合起来, 一个16进制颜色值解析器就完成了</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn hex_color(input: &amp;str) -&gt; IResult&lt;&amp;str, Color&gt; {
+  let (input, _) = tag(&quot;#&quot;)(input)?;
+  let (input, (red, green, blue)) = tuple((hex_primary, hex_primary, hex_primary))(input)?;
+
+  Ok((input, Color { red, green, blue }))
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>如果你熟悉 nom, 那么这函数功能非常清晰. 它接受一个类型为 <code>&amp;str</code> 的输入值, 如果输入值以 &quot;#&quot; 开头, 取余下的字符, 尝试连续应用三次 <code>hex_primary</code> 返回元组. 清晰明了.</p>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>通过上面的小例子展示 nom 的用法和风格, 特别是 <code>tag</code>, <code>map_res</code>, <code>tuple</code> 和 <code>IResult</code> 这几个函数或
+数据结构的使用, 它们在 nom 被广泛使用, 熟悉它们可以帮我们更快更高效地使用 nom 构建功能丰富更复杂的解析器.
+根据作者在 5.0 版本以后的倡议, 以后的例子都尽量采用函数而不是宏, 因为我个人在阅读某些依赖 nom 的项目时,
+大量使用宏确实会导致代码易读性下降, 而且 Rust 编辑器或 IDE 对宏的支持都不太好, 这导致这些代码既不好读, 也不容易写或 debug.</p>
+<p>下一篇会尝试用 nom 写一个 S 表达式解析器, 这个例子同样来自 nom 文档, 心急的可以直接移步<a href="https://github.com/Geal/nom/blob/master/examples/s_expression.rs">项目文档</a>.
+这个例子将展示如何从基本的元素开始, 一步步把 nom 赋予的简单有效的组合子通过递归等方式组合起来, 最后实现 S 表达式解析器.</p>
+<p>最后, 在时常抽风的 Github 上冲浪翻文档不易, 如果喜欢, 求赞支持.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../posts/2020-03-09-gitlab-runner启动守护进程.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../posts/2020-05-10-使用nom写parser.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../posts/2020-03-09-gitlab-runner启动守护进程.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../posts/2020-05-10-使用nom写parser.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lunr.zh.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

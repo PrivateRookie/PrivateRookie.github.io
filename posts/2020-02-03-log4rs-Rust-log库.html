@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>log4rs-Rust-log库 - 夜雨秋灯录</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../导言.html">导言</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../文章.html"><strong aria-hidden="true">1.</strong> 文章</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../posts/2018-06-24-openstack创建虚拟机源码阅读.html"><strong aria-hidden="true">1.1.</strong> openstack创建虚拟机源码阅读</a></li><li class="chapter-item "><a href="../posts/2018-06-27-Bottle-框架中装饰器类和描述符应用.html"><strong aria-hidden="true">1.2.</strong> Bottle-框架中装饰器类和描述符应用</a></li><li class="chapter-item "><a href="../posts/2019-04-17-使用devpi搭建本地源.html"><strong aria-hidden="true">1.3.</strong> 使用devpi搭建本地源</a></li><li class="chapter-item "><a href="../posts/2019-04-20-Python展开嵌套序列.html"><strong aria-hidden="true">1.4.</strong> Python展开嵌套序列</a></li><li class="chapter-item "><a href="../posts/2019-04-20-pipenv-使用简介.html"><strong aria-hidden="true">1.5.</strong> pipenv-使用简介</a></li><li class="chapter-item "><a href="../posts/2019-04-22-深度系统rust开发环境搭建.html"><strong aria-hidden="true">1.6.</strong> 深度系统rust开发环境搭建</a></li><li class="chapter-item "><a href="../posts/2019-05-01-miniserve-miniserve简单美观的文件服务器.html"><strong aria-hidden="true">1.7.</strong> miniserve-miniserve简单美观的文件服务器</a></li><li class="chapter-item "><a href="../posts/2019-05-05-magnum-stein-release-new-features.html"><strong aria-hidden="true">1.8.</strong> magnum-stein-release-new-features</a></li><li class="chapter-item "><a href="../posts/2019-05-12-rust-rc.html"><strong aria-hidden="true">1.9.</strong> rust-rc</a></li><li class="chapter-item "><a href="../posts/2019-05-20-Python-Rust-迭代器类比.html"><strong aria-hidden="true">1.10.</strong> Python-Rust-迭代器类比</a></li><li class="chapter-item "><a href="../posts/2019-06-28-搭建etcd服务发现服务.html"><strong aria-hidden="true">1.11.</strong> 搭建etcd服务发现服务</a></li><li class="chapter-item "><a href="../posts/2019-07-03-OpenStack允许root用户使用ssh-key登录.html"><strong aria-hidden="true">1.12.</strong> OpenStack允许root用户使用ssh-key登录</a></li><li class="chapter-item "><a href="../posts/2019-07-06-requirements.txt文件指定依赖.html"><strong aria-hidden="true">1.13.</strong> requirements.txt文件指定依赖</a></li><li class="chapter-item "><a href="../posts/2019-07-10-我经常使用的Rust小crate.html"><strong aria-hidden="true">1.14.</strong> 我经常使用的Rust小crate</a></li><li class="chapter-item "><a href="../posts/2019-07-14-Rust模块与文件.html"><strong aria-hidden="true">1.15.</strong> Rust模块与文件</a></li><li class="chapter-item "><a href="../posts/2019-07-18-Deepin安装Angular10+.html"><strong aria-hidden="true">1.16.</strong> Deepin安装Angular10+</a></li><li class="chapter-item "><a href="../posts/2019-07-25-使用OSProfiler.html"><strong aria-hidden="true">1.17.</strong> 使用OSProfiler</a></li><li class="chapter-item "><a href="../posts/2019-07-27-windows上使用vscode-remote.html"><strong aria-hidden="true">1.18.</strong> windows上使用vscode-remote</a></li><li class="chapter-item "><a href="../posts/2019-08-04-使用rust-analyzer.html"><strong aria-hidden="true">1.19.</strong> 使用rust-analyzer</a></li><li class="chapter-item "><a href="../posts/2019-08-16-Python-package安装时安装额外文件.html"><strong aria-hidden="true">1.20.</strong> Python-package安装时安装额外文件</a></li><li class="chapter-item "><a href="../posts/2019-08-31-Rust-命令行工具.html"><strong aria-hidden="true">1.21.</strong> Rust-命令行工具</a></li><li class="chapter-item "><a href="../posts/2019-09-27-Fedora-CoreOS-尝鲜.html"><strong aria-hidden="true">1.22.</strong> Fedora-CoreOS-尝鲜</a></li><li class="chapter-item "><a href="../posts/2020-01-31-rust代码风格tips.html"><strong aria-hidden="true">1.23.</strong> rust代码风格tips</a></li><li class="chapter-item expanded "><a href="../posts/2020-02-03-log4rs-Rust-log库.html" class="active"><strong aria-hidden="true">1.24.</strong> log4rs-Rust-log库</a></li><li class="chapter-item "><a href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html"><strong aria-hidden="true">1.25.</strong> impl-Trait-vs-dyn-Trait</a></li><li class="chapter-item "><a href="../posts/2020-03-04-nom-cheatsheet.html"><strong aria-hidden="true">1.26.</strong> nom-cheatsheet</a></li><li class="chapter-item "><a href="../posts/2020-03-09-gitlab-runner启动守护进程.html"><strong aria-hidden="true">1.27.</strong> gitlab-runner启动守护进程</a></li><li class="chapter-item "><a href="../posts/2020-03-21-使用nom写parser.html"><strong aria-hidden="true">1.28.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-05-10-使用nom写parser.html"><strong aria-hidden="true">1.29.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-07-使用nom写parser.html"><strong aria-hidden="true">1.30.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-06-25-Rust实现的日至收集工具.html"><strong aria-hidden="true">1.31.</strong> Rust实现的日至收集工具</a></li><li class="chapter-item "><a href="../posts/2020-07-19-typing+pyright-更正确的Python代码.html"><strong aria-hidden="true">1.32.</strong> typing+pyright-更正确的Python代码</a></li><li class="chapter-item "><a href="../posts/2020-07-31-boxercrab发布.html"><strong aria-hidden="true">1.33.</strong> boxercrab发布</a></li><li class="chapter-item "><a href="../posts/2020-08-16-使用nom写parser.html"><strong aria-hidden="true">1.34.</strong> 使用nom写parser</a></li><li class="chapter-item "><a href="../posts/2020-08-30-PowerShell配置.html"><strong aria-hidden="true">1.35.</strong> PowerShell配置</a></li><li class="spacer"></li></ol></li><li class="chapter-item "><a href="../笔记.html"><strong aria-hidden="true">2.</strong> 笔记</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../notes/rust/2021-10-31-嵌套解构.html"><strong aria-hidden="true">2.1.</strong> 嵌套解构</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">夜雨秋灯录</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="log4rs-rust-log-crate"><a class="header" href="#log4rs-rust-log-crate">log4rs Rust log crate</a></h1>
+<hr />
+<p>在用 Rust 写练手项目时经常要用到日志库, 我之前使用过 env_logger 和 pretty_env_logger 这两个日志库, 两个库总体上都满足我之前的需求, 但在配置 log 将 log 写入文件而不仅仅是控制台时, 遇到挺大的麻烦.
+辗转之后发现了 <a href="https://github.com/estk/log4rs">log4rs</a> 这个库, 虽然上手有些复杂, 但有以下特性让我非常喜欢:</p>
+<ol>
+<li>支持通过文件(yaml文件, 我个人非常推荐)和代码配置</li>
+<li>支持写入 log 文件</li>
+<li>自动重载配置文件更新 log 配置!</li>
+<li>支持为每个模块单独配置 log</li>
+<li>支持对 log 信息模式进行配置</li>
+</ol>
+<p>虽然 log4rs 功能挺多, 可惜项目 <a href="https://github.com/estk/log4rs/blob/master/README.md">README</a> 过于简单, 不少功能需要配合 docs.rs/log4rs 和 项目源码才能被发现, 现在总结下 log4rs 使用方法.</p>
+<h2 id="quick-start"><a class="header" href="#quick-start">Quick Start</a></h2>
+<p>首先需要添加依赖</p>
+<pre><code class="language-toml">[dependencies]
+log = &quot;0.4.8&quot;
+log4rs = &quot;0.10.0&quot;
+</code></pre>
+<p>log4rs 有很多 feature, 默认都是开启的, 这里只需要指定版本就好了.</p>
+<p>接着需要写一个 yaml 配置文件 <code>log4rs.yaml</code> 放在项目根目录下</p>
+<pre><code class="language-yaml">---
+# log4rs.yaml
+# 检查配置文件变动的时间间隔
+refresh_rate: 30 seconds
+# appender 负责将日志收集到控制台或文件, 可配置多个
+appenders:
+  stdout:
+    kind: console
+  file:
+    kind: file
+    path: &quot;log/log.log&quot;
+    encoder:
+      # log 信息模式
+      pattern: &quot;{d} - {m}{n}&quot;
+# 对全局 log 进行配置
+root:
+  level: info
+  appenders:
+    - stdout
+    - file
+</code></pre>
+<p>接着在代码中使用 <code>log4rs::init_file</code> 方法读取配置文件进行初始化, 然后使用 <code>log</code> 中的 <code>info!</code> 等宏在需要的地方输出日志.</p>
+<pre><pre class="playground"><code class="language-rust">use log::info;
+use log4rs;
+
+fn main() {
+    log4rs::init_file(&quot;log4rs.yaml&quot;, Default::default()).unwrap();
+    info!(&quot;INFO&quot;);
+}
+</code></pre></pre>
+<p><code>cargo run</code> 运行项目会在项目下新建 <code>log/log.log</code> 文件, 且内容如下, 同时控制台也会输出
+类似的内容.</p>
+<pre><code class="language-log">2020-02-03T15:38:02.659851+08:00 - INFO
+</code></pre>
+<h2 id="概念讲解"><a class="header" href="#概念讲解">概念讲解</a></h2>
+<p>根据 docs.rs/log4rs, log4rs 主要主要有以下概念</p>
+<ul>
+<li>appenders</li>
+<li>encoders</li>
+<li>filers</li>
+<li>loggers</li>
+</ul>
+<h3 id="appenders"><a class="header" href="#appenders">Appenders</a></h3>
+<p>appender 负责将 log 发往控制台或文件. 目前一共有三种类型可选 <code>console</code>, <code>file</code> 和 <code>rolling_file</code>.</p>
+<p><code>console</code> 配置相对简单</p>
+<pre><code class="language-yaml">appenders:
+  console:
+    kind: console
+    target: stdout # 或者 stderr
+    encoder: # console 同样可以配置 encoder
+      kind: pattern
+</code></pre>
+<p><code>file</code> 和 <code>rolling_file</code> 都是将日志收集到文件中, 但对于长时间运行的程序, <code>rolling_file</code> 更合适, 因为它可以配置 log rotate, 避免 log 文件占用太多硬盘空间.</p>
+<p>先说二者的共同配置项</p>
+<pre><code class="language-yaml">appenders:
+  log_file:
+    kind: file # 或 rolling_file
+    path: &lt;log_file_path&gt; # log 文件路径
+    append: true # 追加模式, 即每次在已有文件末尾添加日志, 默认为 true
+    encoder:
+      kind: pattern
+</code></pre>
+<p>对于 <code>rolling_file</code> 需要额外配置 log rotate policy</p>
+<pre><code class="language-yaml">  log_file:
+    kind: rolling_file
+    # ...
+    policy:
+      kind: compound # 默认值, 即使用所有 policy
+      trigger: # 当文件超过10mb 时触发 rotate
+        kind: size
+        limit: 10mb
+      roller: # rotate 类型
+        kind: delete # 直接原有文件
+        # 或者用 fixed_window
+        kind: fixed_window
+        pattern: &quot;compressed-log-{}-.log&quot; # 注意, 需要至少包含 &quot;{}&quot; 用于插入索引值
+        base: 0 # 压缩日志索引值起点
+        count: 2 # 最大保存压缩文件数
+</code></pre>
+<p>fixed_window 的逻辑稍微有些复杂, 当 log 文件触发 rotate 时 log4rs 会把该文件压缩(需启用 gzip feature) 然后以 pattern 中定义文件模式并将 <code>{}</code> 插入索引值保存.
+以上述配置为例, 文件产生顺序为 <code>compressed-log-0-.log</code> -&gt; <code>compressed-log-1-.log</code>, 当文件再次触发
+rotate 时 log4rs 会删除 <code>compressed-log-0-.log</code>, 然后将 <code>compressed-log-1-.log</code> 重命名为 <code>compressed-log-0-.log</code>, 最新的 log 压缩文件命名为 <code>compressed-log-1-.log</code>.</p>
+<p><strong>注意</strong>, 如果压缩文件数量达到最大时, log4rs 会逐个重命名文件, 此时如果 count 的很大, 有可能会造成性能问题.</p>
+<h3 id="encoders"><a class="header" href="#encoders">Encoders</a></h3>
+<p>encoder 负责将 log 信息转换为合适的格式, 如固定格式的平文本或 json, 每个 appender 都可以指定一个
+encoder.</p>
+<p>目前有2个 encoder <code>pattern</code> 和 <code>json</code></p>
+<p><code>json</code> encoder 负责将日志转为 json 格式, 配置项只有一个</p>
+<pre><code class="language-yaml">encoder:
+  kind: json
+</code></pre>
+<p>输出例子如下</p>
+<pre><code class="language-json">{
+    &quot;time&quot;: &quot;2016-03-20T14:22:20.644420340-08:00&quot;,
+    &quot;message&quot;: &quot;the log message&quot;,
+    &quot;module_path&quot;: &quot;foo::bar&quot;,
+    &quot;file&quot;: &quot;foo/bar/mod.rs&quot;,
+    &quot;line&quot;: 100,
+    &quot;level&quot;: &quot;INFO&quot;,
+    &quot;target&quot;: &quot;foo::bar&quot;,
+    &quot;thread&quot;: &quot;main&quot;,
+    &quot;thread_id&quot;: 123,
+    &quot;mdc&quot;: {
+        &quot;request_id&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;
+    }
+}
+</code></pre>
+<p><strong>注意</strong> 实际写入时并不会增加缩进, 而且 log4rs 有个 bug, 其输出的 json 文件最外层没有一个包含所有
+log 信息的列表, 导致该文件不是有效的 json 文件.</p>
+<p>mdc 是 mapped diagnostic context 即映射诊断环境, 用于向 log 中添加额外信息帮助 debug. 详见 <a href="https://crates.io/crates/log-mdc">MDC</a>.</p>
+<p><code>pattern</code> encoder 则是将 log 转换为特定格式的纯文本</p>
+<pre><code class="language-yaml">encoder:
+  kind: pattern
+  pattern: &lt;log_message_pattern&gt;
+</code></pre>
+<p>log 信息的 pattern 可以在 <a href="https://docs.rs/log4rs/0.10.0/log4rs/encode/pattern/index.html">log4rs::encoder::pattern</a> 找到详细定义, 这里简要说明一下.</p>
+<p>pattern 类似于正则表达式, <code>{}</code> 加一个特定字符代表要插入的某个信息, 如 <code>{m}</code> 代表 log 信息, 常见字符如下</p>
+<ul>
+<li>d, data 日期, 默认为 ISO 9601 格式, 可以通过 <code>{d(%Y-%m-%d %H:%M:%S)}</code> 这种方式改变日期格式</li>
+<li>l log 级别</li>
+<li>L, line log消息所在行数</li>
+<li>m, message log 消息</li>
+<li>M, Module log 消息所在模块</li>
+<li>X, mdc 映射诊断环境</li>
+</ul>
+<p>如果要在 log 消息中使用 &quot;{}()&quot; 字符, 需要进行转义, log4rs 可以通过重复字符转义, 如 '{{' -&gt; '{', 或者通过添加 '' 进行转义, 如 '{' -&gt; '{'.</p>
+<h3 id="filters"><a class="header" href="#filters">Filters</a></h3>
+<p>filter 顾名思义即为过滤掉某些 log 信息, 文档好像有问题, 我读的也不是很清楚, 略...</p>
+<h3 id="loggers"><a class="header" href="#loggers">Loggers</a></h3>
+<p>在之前的信息配置中都没有出现 <code>loggers</code> 的配置, 因为我们配置 <code>root</code> 即全局 logger, 在 log4rs 中除了全局 logger, 还可以创建额外的 logger, logger 以 Rust 的模块为结构, 实现了配置继承.</p>
+<p>举个例子, 假设程序结构如下</p>
+<pre><code class="language-bash">src
+├── ask.rs
+└── main.rs
+
+0 directories, 2 files
+</code></pre>
+<p>log 配置文件如下</p>
+<pre><code class="language-yaml">refresh_rate: 30 seconds
+appenders:
+  file:
+    kind: file
+    path: &quot;log/log.log&quot;
+    encoder:
+      kind: pattern
+      pattern: &quot;{d} {l} {M} - {m}{n}&quot;
+root:
+  level: info
+  appenders:
+    - file
+</code></pre>
+<p>在 <code>ask.rs</code> 内容如下</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>use log::{debug, info};
+
+pub fn ask() {
+    debug!(&quot;inside ask module&quot;);
+    info!(&quot;inside ask module&quot;);
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>假设我们在 <code>main.rs</code> 中使用了 <code>ask::ask</code> 你会发现没有 <code>debug!</code> 打印的信息, 这是因为 <code>ask</code> 模块的 logger 默认使用 <code>root</code> logger 的 level, 即 info.</p>
+<p>现在新增一个 appender 和 logger, 并把这个 logger level 设置为 debug.</p>
+<pre><code class="language-yaml">appenders:
+  ask:
+    kind: file
+    path: &quot;log/ask.log&quot;
+    encoder:
+      pattern: &quot;{d} {l} {M} - {m}{n}&quot;
+loggers:
+  play::ask: # logger 名称必须与模块名相同, 如 app::request::db, 第一个应该为 crate 名称
+    level: debug
+    appenders:
+      - ask
+    additivity: false
+</code></pre>
+<p>重新运行程序, 会发现在 <code>log/ask.log</code> 中出现了 debug 级别的日志. 这里额外设置了 <code>additivity</code> 为 false, 因为 log4rs 默认会把子 logger 的信息也收集起来, 因此会在 <code>log/log.log</code> 和 <code>log/ask.log</code> 中都含有 <code>ask</code> 模块的 log 信息, 为了减少冗余, 可以将 <code>additivity</code> 设置为 false, 这样子模块的 log 就不会输出到父模块上.</p>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>跟人感觉 log4rs 的功能挺丰富的, 除了 yaml 格式的, 它还支持 json, toml, xml 和在代码中配置, 基本上都满足了我的需求, 推荐在项目中试一试. <strong>但我还没有对它进行性能测试</strong>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../posts/2020-01-31-rust代码风格tips.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../posts/2020-01-31-rust代码风格tips.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../posts/2020-02-29-impl-Trait-vs-dyn-Trait.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../lunr.zh.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
