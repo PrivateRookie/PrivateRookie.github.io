@@ -14,7 +14,7 @@ openssh 替代方案，因为我在 windows 上使用的 [FluentTerminal](https:
 对 mosh 有更好的支持。这是我在 Windows 上最满意的终端，颜值不错，速度比 Hyper 要快，而且支持
 iterm 颜色方案导入
 
-[![fluent-terminal.png](https://i.postimg.cc/4NN0M7d9/fluent-terminal.png)](https://postimg.cc/7bdXJLSH)
+![fluent-terminal.png](../assets/2020/fluent-terminal.png)
 
 远程机器上可以通过下面的方式安装 mosh-server
 
@@ -59,26 +59,26 @@ Host NUC
 接着在本地的 VSCode 下载 vscode-remote 插件，虽然还处于 preview 阶段，但正式版 VSCode
 现在也可以直接安装了。
 
-[![remote.png](https://i.postimg.cc/mDkRBXZQ/remote.png)](https://postimg.cc/t1K8zzxT)
+![remote.png](../assets/2020/remote.png)
 
 安装完成后应该会在左下角有个连接图标
 
-[![image.png](https://i.postimg.cc/Nfcsrxdw/image.png)](https://postimg.cc/SjgFBc0Z)
+![image.png](../assets/2020/image.png)
 
 点击然后选择 remote-SSH: Connection to remote host，然后在 Host 列表选择之前配置好的
 NUC，等待连接完成。
 
 连接完成后 VSCode 会打开一个新窗口，窗口左下角的远程连接图标显示当前窗口已连接到 NUC
 
-[![NUC.png](https://i.postimg.cc/gkmp020z/NUC.png)](https://postimg.cc/9z8K8VTK)
+![NUC.png](../assets/2020/NUC.png)
 
 选择打开文件打开远程机器上的一个文件夹即可开始在远端机器编辑代码
 
-[![image.png](https://i.postimg.cc/3w45qytB/image.png)](https://postimg.cc/67Xm2QJ2)
+![image.png](../assets/2020/image.png)
 
 值得一提的是在这个窗口打开的命令行也是在远程机器上的，不需要打开后再手动登录  :+1: 。
 
 不过需要注意的是远程的 VSCode 不会同步本地插件，需要再次安装，安装后的插件右下角也会带远程连接
 的图标
 
-[![image.png](https://i.postimg.cc/j5H9VyPz/image.png)](https://postimg.cc/HcL3XcSx)
+![image.png](../assets/2020/image.png)

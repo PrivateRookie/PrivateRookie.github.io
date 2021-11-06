@@ -91,19 +91,19 @@ python3 -m http.server 8100
 
 等待引导程序启动, 会看到如下界面
 
-[![install-coreos.png](https://i.postimg.cc/zXWW539x/install-coreos.png)](https://postimg.cc/crx6B113)
+![install-coreos.png](../assets/2020/install-coreos.png)
 
 选择 Install Fedora CoreOS, 接着在如下页面输入镜像 URL `http://<IP>:8100/fedora-coreos.raw.gz`
 
-[![intpu-image-url.png](https://i.postimg.cc/t4j6gpbp/intpu-image-url.png)](https://postimg.cc/JGp06wt2)
+![intpu-image-url.png](../assets/2020/intpu-image-url.png)
 
 按 Enter 继续, 输入 ignition 文件 URL `http://<IP>:8100/ignition.json`
 
-[![intpu-image-url.png](https://i.postimg.cc/t4j6gpbp/intpu-image-url.png)](https://postimg.cc/JGp06wt2)
+![intpu-image-url.png](../assets/2020/intpu-image-url.png)
 
 按 Enter 完成安装. 镜像安装成功将会自动重启, 这时候就可以在宿主机上通过
 ssh 直接登录
 
-[![coreos-login.png](https://i.postimg.cc/wBWRFNmj/coreos-login.png)](https://postimg.cc/QBTMdHm2)
+![coreos-login.png](../assets/2020/coreos-login.png)
 
 至此 Fedora CoreOS 安装完毕, 在 Fedora CoreOS 中安装软件都是使用容器安装, 推荐使用 podman 进行管理, 详细使用参考 [Reintroduction of Podman](https://www.projectatomic.io/blog/2018/02/reintroduction-podman/)
