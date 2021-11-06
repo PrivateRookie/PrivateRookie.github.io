@@ -167,7 +167,7 @@
                     <main>
                         <h1 id="导言"><a class="header" href="#导言">导言</a></h1>
 <p>个人博客，主要记录技术文章，也许会更新点别的。欢迎关注<a href="https://zhuanlan.zhihu.com/c_208092758/">知乎专栏</a>。</p>
-<p><a href="https://postimg.cc/9rdyw9RP"><img src="https://i.postimg.cc/J4gxgcRF/gamersky-038origin-075-20196291720-FD0.jpg" alt="gamersky-038origin-075-20196291720-FD0.jpg" /></a></p>
+<p><img src="assets/2020/gamersky-038origin-075-20196291720-FD0.jpg" alt="gamersky-038origin-075-20196291720-FD0.jpg" /></p>
 <p><strong>多少事，从来急；天地转，光阴迫。一万年太久，只争朝夕</strong></p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="文章"><a class="header" href="#文章">文章</a></h1>
 <ul>
@@ -2457,7 +2457,7 @@ pub fn sub(x: i32, y: i32) -&gt; i32 {
 一些 crate 选择一下最常用的符号并在 <code>prelude</code> 中导出他们。</p>
 <p><a href="https://crates.io/crates/chrono">chrono</a> 就是一个好例子。</p>
 <p>查看它在 <a href="https://docs.rs">https://docs.rs</a> 上的文档，它的主入口导出如下东西：</p>
-<p><a href="https://postimg.cc/dhX7qX0k"><img src="https://i.postimg.cc/Ls4jVFKT/chrono-exports.png" alt="chrono-exports.png" /></a></p>
+<p><img src="posts/../assets/2020/chrono-exports.png" alt="chrono-exports.png" /></p>
 <p>所以如果这样写：</p>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
@@ -2467,7 +2467,7 @@ pub fn sub(x: i32, y: i32) -&gt; i32 {
 </span></code></pre></pre>
 <p>将会在作用域内导入 <code>serde</code>，这会遮盖 <code>serde</code> crate。</p>
 <p>这也是为什么 chrono 使用 <code>preclude</code> 模块，这个模块只导出如下内容：</p>
-<p><a href="https://postimg.cc/6Tw85CB0"><img src="https://i.postimg.cc/7PJ09Ncp/chrono-prelude-exports.png" alt="chrono-prelude-exports.png" /></a></p>
+<p><img src="posts/../assets/2020/chrono-exports.png" alt="chrono-prelude-exports.png" /></p>
 <h2 id="结论"><a class="header" href="#结论">结论</a></h2>
 <p>我希望这些能澄清 rust 的模块和文件，如果有任何疑问，请在 <a href="https://twitter.com/fasterthanlime">Twitter</a>上告诉我。感谢阅读！</p>
 <hr />
@@ -2632,7 +2632,7 @@ VPN 的方式就可以在 Windows 上使用 NUC 机器进行开发。</p>
 openssh 替代方案，因为我在 windows 上使用的 <a href="https://github.com/felixse/FluentTerminal">FluentTerminal</a>
 对 mosh 有更好的支持。这是我在 Windows 上最满意的终端，颜值不错，速度比 Hyper 要快，而且支持
 iterm 颜色方案导入</p>
-<p><a href="https://postimg.cc/7bdXJLSH"><img src="https://i.postimg.cc/4NN0M7d9/fluent-terminal.png" alt="fluent-terminal.png" /></a></p>
+<p><img src="posts/../assets/2020/fluent-terminal.png" alt="fluent-terminal.png" /></p>
 <p>远程机器上可以通过下面的方式安装 mosh-server</p>
 <pre><code class="language-bash"># CentOS
 # 需要安装 epel-release
@@ -2664,19 +2664,19 @@ Host NUC
 </code></pre>
 <p>接着在本地的 VSCode 下载 vscode-remote 插件，虽然还处于 preview 阶段，但正式版 VSCode
 现在也可以直接安装了。</p>
-<p><a href="https://postimg.cc/t1K8zzxT"><img src="https://i.postimg.cc/mDkRBXZQ/remote.png" alt="remote.png" /></a></p>
+<p><img src="posts/../assets/2020/remote.png" alt="remote.png" /></p>
 <p>安装完成后应该会在左下角有个连接图标</p>
-<p><a href="https://postimg.cc/SjgFBc0Z"><img src="https://i.postimg.cc/Nfcsrxdw/image.png" alt="image.png" /></a></p>
+<p><img src="posts/../assets/2020/image.png" alt="image.png" /></p>
 <p>点击然后选择 remote-SSH: Connection to remote host，然后在 Host 列表选择之前配置好的
 NUC，等待连接完成。</p>
 <p>连接完成后 VSCode 会打开一个新窗口，窗口左下角的远程连接图标显示当前窗口已连接到 NUC</p>
-<p><a href="https://postimg.cc/9z8K8VTK"><img src="https://i.postimg.cc/gkmp020z/NUC.png" alt="NUC.png" /></a></p>
+<p><img src="posts/../assets/2020/NUC.png" alt="NUC.png" /></p>
 <p>选择打开文件打开远程机器上的一个文件夹即可开始在远端机器编辑代码</p>
-<p><a href="https://postimg.cc/67Xm2QJ2"><img src="https://i.postimg.cc/3w45qytB/image.png" alt="image.png" /></a></p>
+<p><img src="posts/../assets/2020/image.png" alt="image.png" /></p>
 <p>值得一提的是在这个窗口打开的命令行也是在远程机器上的，不需要打开后再手动登录  :+1: 。</p>
 <p>不过需要注意的是远程的 VSCode 不会同步本地插件，需要再次安装，安装后的插件右下角也会带远程连接
 的图标</p>
-<p><a href="https://postimg.cc/HcL3XcSx"><img src="https://i.postimg.cc/j5H9VyPz/image.png" alt="image.png" /></a></p>
+<p><img src="posts/../assets/2020/image.png" alt="image.png" /></p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="vscode-使用-rust-analyzer"><a class="header" href="#vscode-使用-rust-analyzer">VSCode 使用 rust-analyzer</a></h1>
 <hr />
 <h2 id="前言"><a class="header" href="#前言">前言</a></h2>
@@ -2875,7 +2875,7 @@ data_files =
 <p>随着 Rust 生态越来越繁盛，使用 Rust 实现的小工具越来越多，下面推荐4个我试用后觉得不错的工具</p>
 <h2 id="starship"><a class="header" href="#starship">starship</a></h2>
 <p><a href="https://starship.rs/">starship</a> 是一个类似于 oh-my-zsh 的美化工具，而且它还支持 bash 和 fish。</p>
-<p><a href="https://postimg.cc/vxVXn71T"><img src="https://i.postimg.cc/d3Wfz4w2/starship1.gif" alt="starship1.gif" /></a></p>
+<p><img src="posts/../assets/2020/starship1.gif" alt="starship1.gif" /></p>
 <p>它的特性很多，但我最喜欢的是可定制化且信息丰富的 Git 分支和工作区信息，当前工作区项目版本信息和后台任务提示。
 想了解更多特性可以参考<a href="https://starship.rs/guide/#%F0%9F%8D%AC-features">文档</a>。</p>
 <p>它的安装和配置也非常简单。</p>
@@ -2931,7 +2931,7 @@ symbol = &quot;⚙️ &quot;
 <p><a href="https://github.com/sharkdp/bat">bat</a> 是 cat 命令的替代品，虽然是 cat 这样简单命令的替换，但 bat 在 Github 项目上的 star 已经 15,009 了，可见大家对 bat 的喜爱。</p>
 <p>相比于 cat, bat 添加了语法高亮和 Git 集成等诸多特性。而且也有详细的<a href="https://github.com/chinanf-boy/bat-zh">中文文档</a>。
 如何安装和使用我就不再赘述，仅放一张 gif 作为参考。</p>
-<p><a href="https://postimg.cc/hXtnLhrg"><img src="https://i.postimg.cc/CxjKVqnZ/bat.gif" alt="bat.gif" /></a></p>
+<p><img src="posts/../assets/2020/bat.gif" alt="bat.gif" /></p>
 <h2 id="ffsend"><a class="header" href="#ffsend">ffsend</a></h2>
 <p>火狐公司推出了一项免费的阅后即焚加密文件共享服务 <a href="https://send.firefox.com/">firefox send</a>，你可以上传文件，设置文件保存时间和可被下载次数，然后将文件下载
 链接分享给别人以分享文件。最大上传2.5G大小的文件，在分享小文件但又不想被百度云限速时很有用。</p>
@@ -2967,7 +2967,7 @@ cargo install procs
 <p>不带参数的 procs 命令会展示所有进程。</p>
 <pre><code class="language-bash">procs
 </code></pre>
-<p><a href="https://user-images.githubusercontent.com/4331004/55446625-5e5fce00-55fb-11e9-8914-69e8640d89d7.png"><img src="https://user-images.githubusercontent.com/4331004/55446625-5e5fce00-55fb-11e9-8914-69e8640d89d7.png" alt="prcos-no-opts" /></a></p>
+<p><img src="posts/../assets/2020/prcos-no-opts.png" alt="prcos-no-opts" /></p>
 <p>如果要显示某个用户的所有进程也很简单</p>
 <pre><code class="language-bash">procs rookie
 </code></pre>
@@ -3039,14 +3039,14 @@ ssh_authorized_keys 可以通过 <code>cat ~/.ssh/id_rsa.pub</code> 查看</p>
 <p>打开 virt-manager, 创建虚拟机, 选择使用 ISO 映像或光驱安装, 选择 installer.iso 镜像,
 内存, CPU 和存储大小根据宿主机配置自行改变, 网络选择默认NAT模式, 点击完成.</p>
 <p>等待引导程序启动, 会看到如下界面</p>
-<p><a href="https://postimg.cc/crx6B113"><img src="https://i.postimg.cc/zXWW539x/install-coreos.png" alt="install-coreos.png" /></a></p>
+<p><img src="posts/../assets/2020/install-coreos.png" alt="install-coreos.png" /></p>
 <p>选择 Install Fedora CoreOS, 接着在如下页面输入镜像 URL <code>http://&lt;IP&gt;:8100/fedora-coreos.raw.gz</code></p>
-<p><a href="https://postimg.cc/JGp06wt2"><img src="https://i.postimg.cc/t4j6gpbp/intpu-image-url.png" alt="intpu-image-url.png" /></a></p>
+<p><img src="posts/../assets/2020/intpu-image-url.png" alt="intpu-image-url.png" /></p>
 <p>按 Enter 继续, 输入 ignition 文件 URL <code>http://&lt;IP&gt;:8100/ignition.json</code></p>
-<p><a href="https://postimg.cc/JGp06wt2"><img src="https://i.postimg.cc/t4j6gpbp/intpu-image-url.png" alt="intpu-image-url.png" /></a></p>
+<p><img src="posts/../assets/2020/intpu-image-url.png" alt="intpu-image-url.png" /></p>
 <p>按 Enter 完成安装. 镜像安装成功将会自动重启, 这时候就可以在宿主机上通过
 ssh 直接登录</p>
-<p><a href="https://postimg.cc/QBTMdHm2"><img src="https://i.postimg.cc/wBWRFNmj/coreos-login.png" alt="coreos-login.png" /></a></p>
+<p><img src="posts/../assets/2020/coreos-login.png" alt="coreos-login.png" /></p>
 <p>至此 Fedora CoreOS 安装完毕, 在 Fedora CoreOS 中安装软件都是使用容器安装, 推荐使用 podman 进行管理, 详细使用参考 <a href="https://www.projectatomic.io/blog/2018/02/reintroduction-podman/">Reintroduction of Podman</a></p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="rust-代码风格-tips"><a class="header" href="#rust-代码风格-tips">Rust 代码风格 Tips</a></h1>
 <p>文章绝大部分翻译自<a href="https://github.com/rust-unofficial/patterns">Rust Design Patters</a>, 为了快速简洁, 并没有严格翻译</p>

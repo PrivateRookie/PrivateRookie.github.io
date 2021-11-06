@@ -764,7 +764,7 @@ pub fn sub(x: i32, y: i32) -&gt; i32 {
 一些 crate 选择一下最常用的符号并在 <code>prelude</code> 中导出他们。</p>
 <p><a href="https://crates.io/crates/chrono">chrono</a> 就是一个好例子。</p>
 <p>查看它在 <a href="https://docs.rs">https://docs.rs</a> 上的文档，它的主入口导出如下东西：</p>
-<p><a href="https://postimg.cc/dhX7qX0k"><img src="https://i.postimg.cc/Ls4jVFKT/chrono-exports.png" alt="chrono-exports.png" /></a></p>
+<p><img src="../assets/2020/chrono-exports.png" alt="chrono-exports.png" /></p>
 <p>所以如果这样写：</p>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
@@ -774,7 +774,7 @@ pub fn sub(x: i32, y: i32) -&gt; i32 {
 </span></code></pre></pre>
 <p>将会在作用域内导入 <code>serde</code>，这会遮盖 <code>serde</code> crate。</p>
 <p>这也是为什么 chrono 使用 <code>preclude</code> 模块，这个模块只导出如下内容：</p>
-<p><a href="https://postimg.cc/6Tw85CB0"><img src="https://i.postimg.cc/7PJ09Ncp/chrono-prelude-exports.png" alt="chrono-prelude-exports.png" /></a></p>
+<p><img src="../assets/2020/chrono-exports.png" alt="chrono-prelude-exports.png" /></p>
 <h2 id="结论"><a class="header" href="#结论">结论</a></h2>
 <p>我希望这些能澄清 rust 的模块和文件，如果有任何疑问，请在 <a href="https://twitter.com/fasterthanlime">Twitter</a>上告诉我。感谢阅读！</p>
 <hr />

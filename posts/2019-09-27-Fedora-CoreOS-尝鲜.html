@@ -230,14 +230,14 @@ ssh_authorized_keys 可以通过 <code>cat ~/.ssh/id_rsa.pub</code> 查看</p>
 <p>打开 virt-manager, 创建虚拟机, 选择使用 ISO 映像或光驱安装, 选择 installer.iso 镜像,
 内存, CPU 和存储大小根据宿主机配置自行改变, 网络选择默认NAT模式, 点击完成.</p>
 <p>等待引导程序启动, 会看到如下界面</p>
-<p><a href="https://postimg.cc/crx6B113"><img src="https://i.postimg.cc/zXWW539x/install-coreos.png" alt="install-coreos.png" /></a></p>
+<p><img src="../assets/2020/install-coreos.png" alt="install-coreos.png" /></p>
 <p>选择 Install Fedora CoreOS, 接着在如下页面输入镜像 URL <code>http://&lt;IP&gt;:8100/fedora-coreos.raw.gz</code></p>
-<p><a href="https://postimg.cc/JGp06wt2"><img src="https://i.postimg.cc/t4j6gpbp/intpu-image-url.png" alt="intpu-image-url.png" /></a></p>
+<p><img src="../assets/2020/intpu-image-url.png" alt="intpu-image-url.png" /></p>
 <p>按 Enter 继续, 输入 ignition 文件 URL <code>http://&lt;IP&gt;:8100/ignition.json</code></p>
-<p><a href="https://postimg.cc/JGp06wt2"><img src="https://i.postimg.cc/t4j6gpbp/intpu-image-url.png" alt="intpu-image-url.png" /></a></p>
+<p><img src="../assets/2020/intpu-image-url.png" alt="intpu-image-url.png" /></p>
 <p>按 Enter 完成安装. 镜像安装成功将会自动重启, 这时候就可以在宿主机上通过
 ssh 直接登录</p>
-<p><a href="https://postimg.cc/QBTMdHm2"><img src="https://i.postimg.cc/wBWRFNmj/coreos-login.png" alt="coreos-login.png" /></a></p>
+<p><img src="../assets/2020/coreos-login.png" alt="coreos-login.png" /></p>
 <p>至此 Fedora CoreOS 安装完毕, 在 Fedora CoreOS 中安装软件都是使用容器安装, 推荐使用 podman 进行管理, 详细使用参考 <a href="https://www.projectatomic.io/blog/2018/02/reintroduction-podman/">Reintroduction of Podman</a></p>
 
                     </main>
