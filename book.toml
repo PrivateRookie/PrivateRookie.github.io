@@ -9,7 +9,7 @@ title = "夜雨秋灯录"
 google-analytics = "UA-138690523-1"
 
 [output.html.fold]
-enable = true
+enable = false
 
 [build]
 create-missing = false
