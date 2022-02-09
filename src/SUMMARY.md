@@ -49,4 +49,4 @@
 - [笔记](笔记.md)
   - [嵌套解构](notes/rust/2021-10-31-嵌套解构.md)
   - [未提前释放的引用](notes/rust/2021-11-06-未能提早释放的RefCell.md)
-  - [serde收集未知字段](nodes/rust/2022-02-09-serde收集未知字段.md)
+  - [serde收集未知字段](notes/rust/2022-02-09-serde收集未知字段.md)
