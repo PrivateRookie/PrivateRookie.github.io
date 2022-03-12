@@ -5565,7 +5565,7 @@ ws.send((Opcode::Ping, &quot;are you ok?&quot;));
 </span></code></pre></pre>
 <p>可以看到 send 函数不是很复杂, 第一步进行类型转换, 接着判断是否传入关闭状态码, 调用底层帧读写结构体写入数据.</p>
 <h2 id="总结-8"><a class="header" href="#总结-8">总结</a></h2>
-<p>使用 Into trait 优点在于调用时无需手动包一层, 更加方便, 缺点在于函数定义稍显麻烦, 且如果为某个类型实现了太多 <code>From</code> trait, 反而因太多选线导致用户无法确定该传入什么类型参数, 不能滥用.</p>
+<p>使用 Into trait 优点在于调用时无需手动包一层, 更加方便, 缺点在于函数定义稍显麻烦, 且如果为某个类型实现了太多 <code>From</code> trait, 反而因太多选项导致用户无法确定该传入什么类型参数, 不能滥用.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="笔记"><a class="header" href="#笔记">笔记</a></h1>
 <ul>
 <li><a href="notes/rust/2021-10-31-%E5%B5%8C%E5%A5%97%E8%A7%A3%E6%9E%84.html">2021-10-31-嵌套解构</a></li>
