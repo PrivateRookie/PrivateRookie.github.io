@@ -52,3 +52,4 @@
   - [未提前释放的引用](notes/rust/2021-11-06-未能提早释放的RefCell.md)
   - [serde收集未知字段](notes/rust/2022-02-09-serde收集未知字段.md)
   - [如何在编译期确定某个类型是不是 Option](notes/rust/2022-02-17-编译期确定某个类型是不是Option.md)
+  - [ws-tool 0.5.0 发布](notes/rust/2022-03-23-ws-tool%E6%96%B0%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83.md)
