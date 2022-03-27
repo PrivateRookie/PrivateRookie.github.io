@@ -7,4 +7,17 @@ json 格式通常有确定的数据类型, 这时候我们可以依靠 jsonschem
 这里介绍一种借助 Rust 和 [schema-rs](https://docs.rs/schemars/latest/schemars/) 快速生成 jsonschema 并应用于
 json, yaml, toml 等文件校验补全的方法.
 
-我们需要添加
+其原理是借助 Rust 静态强类型语言和强大的过程宏, 首先将期望的数据类型在 Rust 中表达出来, 然后使用 `schema-rs` 提供的过程宏生成结构体对应的 jsonschema. 接着在 vscode 中把生成的 jsonschema 与需校验的文件关联起来即可.
+
+假设要添加如下配置文件校验
+
+```rust
+/// service config
+pub struct Config {
+    /// set service workspace dir
+    workspace: PathBuf,
+    /// max worker
+    #[serde(d)]
+    max_workers: usize
+}
+```
