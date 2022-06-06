@@ -53,3 +53,4 @@
   - [serde收集未知字段](notes/rust/2022-02-09-serde收集未知字段.md)
   - [如何在编译期确定某个类型是不是 Option](notes/rust/2022-02-17-编译期确定某个类型是不是Option.md)
   - [ws-tool 0.5.0 发布](notes/rust/2022-03-23-ws-tool新版本发布.md)
+  - [rtml更新](notes/rust/2022-06-06-rtml更新.md)
