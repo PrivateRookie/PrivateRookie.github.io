@@ -42,6 +42,7 @@
   - [使用nom写parser](posts/2020-08-16-使用nom写parser.md)
   - [PowerShell配置](posts/2020-08-30-PowerShell配置.md)
   - [Into特性实现参数多态的技巧](posts/2022-03-12-Into特性实现参数多态的技巧.md)
+  - [HowTo-clap](posts/2023-05-11-HowTo-clap.md)
 
 ---
 
