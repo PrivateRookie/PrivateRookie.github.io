@@ -12,17 +12,18 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Setup zine
-        run: cargo install zine
+      - name: build page
+        run: |
+          wget https://github.com/zineland/zine/releases/download/$ZINE_VERSION/zine-x86_64-unknown-linux-gnu.tar.gz -O zine.tar.gz
+          tar xvf zine.tar.gz
+          ./zine build
 
-      - run: zine build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          path: ./build
+
