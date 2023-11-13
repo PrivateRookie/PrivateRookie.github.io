@@ -16,10 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup mdBook
+      - name: Setup zine
         run: cargo install zine
-
-      - uses: actions/checkout@v2
 
       - run: zine build
 
