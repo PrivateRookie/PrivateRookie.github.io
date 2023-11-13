@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  ZINE_VERSION: v0.13.0
+  ZINE_VERSION: v0.16.0
 
 permissions:
   contents: read
