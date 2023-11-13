@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>夜雨秋灯录</title>
+    <subtitle>无事此静坐, 闲情且赋诗</subtitle>
+    <updated>2023-11-13T08:27:32.237336595Z</updated>
+    <id>https://privaterookie.github.io</id>
+    <link href="https://privaterookie.github.io/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="https://privaterookie.github.io" rel="alternate" type="text/html" />
+    <generator uri="https://github.com/zineland/zine" version="0.16.0">zine</generator>
+    <author>
+        <name>夜雨秋灯录</name>
+        <uri>https://privaterookie.github.io</uri>
+    </author>
+
+    </feed>

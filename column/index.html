@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#faf4ec">
+    <meta name="zine-version" content="0.16.0"/>
+    <title>专栏</title>
+<meta name="description" content="介绍如何使用 nom 编写 parser, 从最简单的字符串解析, 到 redis 文本协议和 mysql binlog 二进制协议.
+HowTo 系列旨在提供常见工程问题解决办法, 多包含示例代码.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="专栏">
+<meta property="og:description" content="介绍如何使用 nom 编写 parser, 从最简单的字符串解析, 到 redis 文本协议和 mysql binlog 二进制协议.
+HowTo 系列旨在提供常见工程问题解决办法, 多包含示例代码.">
+<meta name="twitter:title" content="专栏">
+<meta name="twitter:description" content="介绍如何使用 nom 编写 parser, 从最简单的字符串解析, 到 redis 文本协议和 mysql binlog 二进制协议.
+HowTo 系列旨在提供常见工程问题解决办法, 多包含示例代码.">
+<meta property="og:url" content="https://privaterookie.github.io/column">
+<meta property="twitter:url" content="https://privaterookie.github.io/column">
+<link rel="icon" type="image/png" href="/favicon.ico">
+    <link rel="stylesheet" href="/static/zine.css">
+    <link rel="alternate" type="application/atom+xml" title="夜雨秋灯录 RSS" href="/feed.xml">
+    <style>
+    :root {
+        --primary-color: #faf4ec;
+        --main-color: #000;
+        --link-color: #2563eb;
+        --secondary-color: #eff3f7;
+    }
+    </style>
+</head>
+
+<body class="h-full bg-secondary">
+    <div class="zine-header bg-primary text-main font-bold text-center z-0"
+        style="background-image: url('/static/assets/bg.jpg')">
+    <header class="p-8 md:p-10">
+            <div class="zine-brand text-4xl lg:text-5xl">
+                <a href="/">夜雨秋灯录</a>
+            </div>
+            <ul class="zine-menu">
+                <li class="inline-block mt-6 mx-5 text-base hover:underline">
+                    <a href="/">主页</a>
+                </li>
+                <li class="inline-block mt-6 mx-5 text-base hover:underline">
+                    <a href="/column">专栏</a>
+                </li>
+                <li class="inline-block mt-6 mx-5 text-base hover:underline">
+                    <a href="/articles">文章</a>
+                </li>
+                <li class="inline-block mt-6 mx-5 text-base hover:underline">
+                    <a href="/notes">笔记</a>
+                </li>
+                <li class="inline-block mt-6 mx-5 text-base hover:underline">
+                    <a href="/topics">话题</a>
+                </li>
+                <li class="inline-block mt-6 mx-5 text-base hover:underline">
+                    <a href="/about">关于</a>
+                </li>
+                </ul>
+        </header>
+        <div class="zine-space w-full h-32 md:h-36 lg:h-44 xl:h-48 2xl:h-56"></div>
+    </div>
+    <main
+        class="pb-10 -translate-y-32 lg:-translate-y-36 xl:-translate-y-44 2xl:-translate-y-56 mx-auto sm:max-w-scree-md md:max-w-screen-lg">
+        <div class="p-4 md:p-8 mx-4 my-6 bg-white min-h-[500px] shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5">
+    <article class="zine-page prose mx-auto py-8">
+        <h1 id="专栏" class="toc-item group scroll-mt-20">
+    专栏
+    <a href="#专栏" class="ml-2 inline-block opacity-0 border-0 group-hover:opacity-100"
+        aria-label="Anchor">
+        <div
+            class="w-6 h-6 text-slate-400 ring-1 ring-slate-900/5 rounded-md shadow-sm flex items-center justify-center hover:ring-slate-900/10 hover:shadow hover:text-slate-700">
+            <svg width="12" height="12" fill="none" aria-hidden="true">
+                <path d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                </path>
+            </svg>
+        </div>
+    </a>
+</h1><h2 id="使用-nom-写-parser" class="toc-item group scroll-mt-20">
+    使用 nom 写 parser
+    <a href="#使用-nom-写-parser" class="ml-2 inline-block opacity-0 border-0 group-hover:opacity-100"
+        aria-label="Anchor">
+        <div
+            class="w-6 h-6 text-slate-400 ring-1 ring-slate-900/5 rounded-md shadow-sm flex items-center justify-center hover:ring-slate-900/10 hover:shadow hover:text-slate-700">
+            <svg width="12" height="12" fill="none" aria-hidden="true">
+                <path d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                </path>
+            </svg>
+        </div>
+    </a>
+</h2>
+<p>介绍如何<a href="/nom-parser">使用 nom 编写 parser</a>, 从最简单的字符串解析, 到 redis 文本协议和 mysql binlog 二进制协议.</p>
+<h2 id="how-to" class="toc-item group scroll-mt-20">
+    How to
+    <a href="#how-to" class="ml-2 inline-block opacity-0 border-0 group-hover:opacity-100"
+        aria-label="Anchor">
+        <div
+            class="w-6 h-6 text-slate-400 ring-1 ring-slate-900/5 rounded-md shadow-sm flex items-center justify-center hover:ring-slate-900/10 hover:shadow hover:text-slate-700">
+            <svg width="12" height="12" fill="none" aria-hidden="true">
+                <path d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round">
+                </path>
+            </svg>
+        </div>
+    </a>
+</h2>
+<p><a href="/howto">HowTo</a> 系列旨在提供常见工程问题解决办法, 多包含示例代码.</p>
+
+    </article>
+</div>
+</main>
+    <footer class="relative">
+        <div class="bg-black text-white text-center p-16">
+            <div>
+                <a class="hover:underline" href="https://github.com/zineland/zine">Zine</a>
+                - a simple and opinionated tool to build your own magazine.
+            </div>
+        </div>
+        <a href="https://github.com/zineland"
+            class="absolute z-20 bottom-0 w-full text-center font-bold md:text-slate-100 md:opacity-10 md:hover:opacity-50 md:bg-transparent bg-primary p-2 text-main">
+            Proudly powered by Zine.
+        </a>
+    </footer>
+</body>
+<script src="/static/medium-zoom.min.js"></script>
+<script src="/static/zine.js"></script>
+</html>
