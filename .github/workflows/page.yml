@@ -12,19 +12,19 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
 
       - name: Setup mdBook
-        run: cargo install --force mdbook --git https://github.com/allenchou13/mdBook.git
+        run: cargo install zine
 
       - uses: actions/checkout@v2
 
-      - run: mdbook build
+      - run: zine build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
+          publish_dir: ./build

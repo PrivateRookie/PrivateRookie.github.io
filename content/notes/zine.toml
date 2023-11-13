@@ -1,0 +1,65 @@
+number = 99
+title = "笔记"
+
+[[article]]
+file = "2021-10-31-嵌套解构.md"
+title = "嵌套解构"
+pub_date = "2021-10-31"
+author = "PrivateRookie"
+publish = true
+topic = ["rust"]
+cover = "/static/assets/cover/c11.webp"
+
+[[article]]
+file = "2021-11-06-未能提早释放的RefCell.md"
+title = "未能提早释放的RefCell"
+pub_date = "2021-11-06"
+author = "PrivateRookie"
+publish = true
+topic = ["rust"]
+cover = "/static/assets/cover/c11.webp"
+
+[[article]]
+file = "2022-02-09-serde收集未知字段.md"
+title = "serde收集未知字段"
+pub_date = "2022-02-09"
+author = "PrivateRookie"
+publish = true
+topic = ["rust"]
+cover = "/static/assets/cover/c11.webp"
+
+[[article]]
+file = "2022-02-17-编译期确定某个类型是不是Option.md"
+title = "编译期确定某个类型是不是Option"
+pub_date = "2022-02-17"
+author = "PrivateRookie"
+publish = true
+topic = ["rust"]
+cover = "/static/assets/cover/c11.webp"
+
+[[article]]
+file = "2022-03-13-快速生成jsonschema.md"
+title = "快速生成jsonschema"
+pub_date = "2022-03-13"
+author = "PrivateRookie"
+publish = true
+topic = ["rust"]
+cover = "/static/assets/cover/c17.webp"
+
+[[article]]
+file = "2022-03-23-ws-tool新版本发布.md"
+title = "ws-tool新版本发布"
+pub_date = "2022-03-23"
+author = "PrivateRookie"
+publish = true
+topic = ["rust", "release"]
+cover = "/static/assets/cover/c16.webp"
+
+[[article]]
+file = "2022-06-06-rtml更新.md"
+title = "rtml更新"
+pub_date = "2022-06-06"
+author = "PrivateRookie"
+publish = true
+topic = ["rust", "release"]
+cover = "/static/assets/cover/c21.webp"

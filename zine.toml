@@ -1,0 +1,33 @@
+
+[site]
+url = "https://privaterookie.github.io"
+name = "夜雨秋灯录"
+description = "无事此静坐, 闲情且赋诗"
+local = "zh"
+menu = [
+    { name = "主页", url = "/" },
+    { name = "专栏", url = "/column" },
+    { name = "文章", url = "/articles" },
+    { name = "笔记", url = "/notes" },
+    { name = "话题", url = "/topics" },
+    { name = "关于", url = "/about" },
+]
+
+[topics]
+note = { name = "笔记", description = "琐碎知识" }
+article = { name = "文章", description = "篇幅较长的记录" }
+source_code = { name = "源码阅读" }
+dev_env = { name = "开发环境" }
+translation = { name = "翻译" }
+cheatsheet = { name = "小抄" }
+release = { name = "发布" }
+python = { name = "Python" }
+rust = { name = "Rust" }
+
+[authors]
+PrivateRookie = { name = "PrivateRookie", avatar = "/static/assets/avatar.jpeg",editor = true, bio = "医学生转行的程序员" }
+
+[theme]
+background_image = "/static/assets/bg.jpg"
+main_color = "#000"
+primary_color = "#faf4ec"
