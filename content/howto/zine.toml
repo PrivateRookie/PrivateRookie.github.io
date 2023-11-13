@@ -1,11 +1,12 @@
 number = 398
 title = "HowTo"
+publish = true
 
 [[article]]
 file = "2023-05-11-HowTo-clap.md"
 title = "HowTo-clap.md"
 pub_date = "2023-05-11"
-publised = true
+publish = true
 author = "PrivateRookie"
 topic = ["rust"]
 cover = "/static/assets/cover/c22.webp"

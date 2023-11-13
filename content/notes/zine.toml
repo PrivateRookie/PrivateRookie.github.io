@@ -1,5 +1,6 @@
 number = 99
 title = "笔记"
+publish = true
 
 [[article]]
 file = "2021-10-31-嵌套解构.md"

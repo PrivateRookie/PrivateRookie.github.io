@@ -14,8 +14,6 @@ menu = [
 ]
 
 [topics]
-note = { name = "笔记", description = "琐碎知识" }
-article = { name = "文章", description = "篇幅较长的记录" }
 source_code = { name = "源码阅读" }
 dev_env = { name = "开发环境" }
 translation = { name = "翻译" }
