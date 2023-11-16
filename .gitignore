@@ -1,3 +1,8 @@
 book
 src/codes/rust/target
 build
+
+
+# Added by cargo
+
+/target
