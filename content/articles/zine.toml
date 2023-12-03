@@ -326,4 +326,4 @@ pub_date = "2023-12-03"
 publish = true
 author = "PrivateRookie"
 topic = ["rust"]
-cover = "/static/assets/cover/c23.webp"
+cover = "/static/assets/cover/c23.jpg"
