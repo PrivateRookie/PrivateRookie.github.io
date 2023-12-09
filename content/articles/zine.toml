@@ -318,12 +318,3 @@ publish = true
 author = "PrivateRookie"
 topic = ["rust"]
 cover = "/static/assets/cover/c6.webp"
-
-[[article]]
-file = "2023-12-03-底层依赖版本冲突.md"
-title = "解决底层依赖版本冲突.md"
-pub_date = "2023-12-03"
-publish = true
-author = "PrivateRookie"
-topic = ["rust"]
-cover = "/static/assets/cover/c23.jpg"

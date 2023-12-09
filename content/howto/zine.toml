@@ -4,9 +4,27 @@ publish = true
 
 [[article]]
 file = "2023-05-11-HowTo-clap.md"
-title = "HowTo-clap.md"
+title = "使用 clap"
 pub_date = "2023-05-11"
 publish = true
 author = "PrivateRookie"
 topic = ["rust"]
 cover = "/static/assets/cover/c22.webp"
+
+[[article]]
+file = "2023-12-03-底层依赖版本冲突.md"
+title = "通过feature选择依赖版本"
+pub_date = "2023-12-03"
+publish = true
+author = "PrivateRookie"
+topic = ["rust"]
+cover = "/static/assets/cover/c23.jpg"
+
+[[article]]
+file = "2023-12-07-how-to-loging.md"
+title = "logging"
+pub_date = "2023-12-07"
+publish = true
+author = "PrivateRookie"
+topic = ["rust"]
+cover = "/static/assets/cover/c25.jpg"
