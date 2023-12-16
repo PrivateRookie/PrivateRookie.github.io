@@ -28,3 +28,12 @@ publish = true
 author = "PrivateRookie"
 topic = ["rust"]
 cover = "/static/assets/cover/c25.jpg"
+
+[[article]]
+file = "2023-12-16-在error中添加位置信息.md"
+title = "在error中添加位置信息"
+pub_date = "2023-12-16"
+author = "PrivateRookie"
+publish = true
+topic = ["rust"]
+cover = "/static/assets/cover/c28.jpg"
